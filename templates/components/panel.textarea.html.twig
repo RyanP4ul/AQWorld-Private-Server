@@ -1,0 +1,7 @@
+<div class="col-md-{{ col }}">
+    <div class="form-group">
+        <label>{{ name}} {% if isRequired == 1 %}<small class="text-md text-danger">*</small>{% endif %}</label>
+        <textarea id="_{{ name }}" name="{{ name }}" class="form-control" rows="3"  {% if placeHolder != "" %} placeholder="{{ placeHolder }}{% endif %}">{% if value != "" %} {{ value }} {% endif %}</textarea>
+        <span id="{{ name }}-error" class="text-sm"></span>
+    </div>
+</div>

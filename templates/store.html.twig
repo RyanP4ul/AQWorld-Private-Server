@@ -1,0 +1,229 @@
+{% extends 'layouts/web.layout.html.twig' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+    <div class="min-h-screen bg-gray-950 text-white flex flex-col">
+
+        {% include "/web/header.html.twig" %}
+
+        <section class="relative py-16 px-4 bg-gradient-to-r from-gray-700/50 to-gray-800/50 h-[350px]">
+            <div class="absolute inset-0 bg-[url('https://www.aq.com/img/bg/bg-sub-fourhorsemen.jpg')] bg-cover bg-center opacity-20"></div>
+            <div class="container mx-auto text-center mt-10">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                    Game Store
+                </h1>
+                <p class="text-xl text-gray-300 mb-10">
+                    Enhance your gaming experience with premium items
+                </p>
+            </div>
+        </section>
+
+        <div class="flex-1 py-12 px-4">
+            <div class="container mx-auto">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-64">
+                        <div class="bg-gray-800 rounded-lg p-6 sticky top-24">
+                            <h3 class="text-lg font-semibold mb-4">Categories</h3>
+                            <nav class="space-y-2">
+                                {% for category in categories %}
+                                    <button class="w-full text-left px-3 py-2 rounded-lg transition-colors whitespace-nowrap {% if category == "All" %}bg-purple-600 text-white{% else %}text-gray-300 hover:bg-gray-700{% endif %}">
+                                        {{ category }}
+                                    </button>
+
+{#                                    // ${#}
+{#                                    selectedCategory=== category#}
+{#                                    ?#}
+{#                                    'bg-purple-600 text-white'#}
+{#                                    : 'text-gray-300 hover:bg-gray-700'#}
+                                {% endfor %}
+                            </nav>
+
+{#                            {cart.length > 0 && (#}
+{#                            <div class="mt-8 p-4 bg-gray-700 rounded-lg">#}
+{#                                <h4 class="font-semibold mb-3">Cart ({cart.length})</h4>#}
+{#                                <div class="space-y-2 mb-4">#}
+{#                                    {cart.map((itemId) => {#}
+{#                                    const item = storeItems.find(item => item.id === itemId);#}
+{#                                    return (#}
+{#                                    <div class="flex justify-between items-center text-sm">#}
+{#                                        <span class="truncate mr-2">{item?.name}</span>#}
+{#                                        <div class="flex items-center space-x-2">#}
+{#                                            <span>${item?.price}</span>#}
+{#                                            <button#}
+{#                                                    onClick={()#}
+{#                                            => removeFromCart(itemId)}#}
+{#                                            class="text-red-400 hover:text-red-300"#}
+{#                                            >#}
+{#                                            <i class="ri-close-line"></i>#}
+{#                                            </button>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                    );#}
+{#                                    })}#}
+{#                                </div>#}
+{#                                <div class="border-t border-gray-600 pt-3">#}
+{#                                    <div class="flex justify-between items-center font-semibold">#}
+{#                                        <span>Total:</span>#}
+{#                                        <span>${getTotalPrice()}</span>#}
+{#                                    </div>#}
+{#                                    <Link#}
+{#                                            href="/store/checkout"#}
+{#                                            class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors mt-3 block text-center whitespace-nowrap"#}
+{#                                    >#}
+{#                                    Checkout#}
+{#                                    </Link>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            )}#}
+                        </div>
+                    </div>
+
+                    <div class="flex-1">
+                        <div id="errorBox" class="flex items-center p-4 mb-4 bg-gray-700 border border-gray-700 text-white px-4 py-3 rounded relative" role="alert">
+                            <svg class="shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                            </svg>
+                            <div id="errorMsg" class="ms-3 text-sm font-regular">We currently accept <b>PayPal</b> only. If you'd like to use a different payment method, please reach out to the admin.</div>
+                        </div>
+
+                        <div class="flex items-center justify-between mb-6">
+                            <h2 class="text-2xl font-bold">
+                                Available
+                            </h2>
+                            <div class="flex space-x-2">
+                                <button class="px-4 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-gray-700 transition-colors whitespace-nowrap">
+                                    <i class="ri-filter-line mr-2"></i>
+                                    Filter
+                                </button>
+                                <button class="px-4 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-gray-700 transition-colors whitespace-nowrap">
+                                    <i class="ri-sort-desc mr-2"></i>
+                                    Sort
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="items" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+                        <div id="pagination" class="flex justify-center items-center space-x-4 mt-8"></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        {% include "web/footer.html.twig" %}
+
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+
+    <script>
+        const limit = 5;
+
+        $(document).ready(() => {
+            function loadItems(page = 1) {
+                $.ajax({
+                    url: '{{ route("store") }}',
+                    method: 'GET',
+                    data: { page, limit },
+                    success: function (response) {
+                        const data = JSON.parse(response);
+                        renderItems(data.items);
+                        renderPagination(parseInt(data.total), data.page);
+                    }
+                });
+            }
+
+            function renderItems(items) {
+                $('#items').empty();
+                items.forEach(item => {
+                    $('#items').append(`
+                             <div class="bg-gray-900 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all">
+                                <div class="bg-gray-600 text-white text-xs font-semibold px-3 py-1">
+                                    HOT
+                                </div>
+
+                                <img src="/assets/images/stores/${item.Images}" alt="${item.Name}"
+                                     class="w-full h-48 object-cover object-top"/>
+                                <div class="p-6">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-xs bg-purple-600 text-white px-2 py-1 rounded">${item.Category}</span>
+                                    </div>
+                                    <h3 class="text-lg font-bold mb-2">${item.Name}</h3>
+                                    <p class="text-gray-400 text-sm mb-4">${item.Description}</p>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center space-x-2">
+                                            <span class="text-xl font-bold text-green-400">$${item.Price}</span>
+                                        </div>
+
+                                        <a href="/store/checkout?id=${item.id}" class="px-4 py-2 rounded-lg font-medium transition-colors whitespace-nowrap bg-gray-700 text-white hover:bg-gray-600">Buy</a>
+                                    </div>
+                                </div>
+                            </div>
+                    `);
+                });
+            }
+
+            function renderPagination(totalItems, currentPage) {
+                const totalPages = Math.max(1, Math.ceil((totalItems || 0) / (limit || 1)));
+
+                let html = '';
+
+                if (currentPage > 1) {
+                    html += `<button class="page-btn px-4 py-2 rounded-lg bg-gray-800 text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-700 transition-colors whitespace-nowrap" data-page="${currentPage - 1}">Prev</button>`;
+                } else {
+                    html += `<button class="px-4 py-2 rounded-lg bg-gray-900 text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-700 transition-colors whitespace-nowrap" disabled>Prev</button>`;
+                }
+
+
+                if (totalPages <= 7) {
+                    for (let i = 1; i <= totalPages; i++) {
+                        html += createPageButton(i, currentPage);
+                    }
+                } else {
+                    html += createPageButton(1, currentPage);
+
+                    if (currentPage > 4) {
+                        html += `<span class="dots">...</span>`;
+                    }
+
+                    const start = Math.max(2, currentPage - 1);
+                    const end = Math.min(totalPages - 1, currentPage + 1);
+                    for (let i = start; i <= end; i++) {
+                        html += createPageButton(i, currentPage);
+                    }
+
+                    if (currentPage < totalPages - 3) {
+                        html += `<span class="dots">...</span>`;
+                    }
+
+                    html += createPageButton(totalPages, currentPage);
+                }
+
+                if (currentPage < totalPages) {
+                    html += `<button class="page-btn px-4 py-2 rounded-lg bg-gray-800 text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-700 transition-colors whitespace-nowrap" data-page="${currentPage + 1}">Next</button>`;
+                } else {
+                    html += `<button class="px-4 py-2 rounded-lg bg-gray-900 text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-700 transition-colors whitespace-nowrap" disabled>Next</button>`;
+                }
+
+
+                $('#pagination').html(html);
+            }
+
+            function createPageButton(page, currentPage) {
+                const isActive = parseInt(page) === parseInt(currentPage) ? 'bg-gray-700 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700';
+                return `<button class="page-btn w-10 h-10 rounded-lg transition-colors ${isActive}" data-page="${page}">${page}</button>`;
+            }
+
+            $(document).on('click', '.page-btn', function () {
+                const page = $(this).data('page');
+                loadItems(page);
+            });
+
+            loadItems();
+        });
+    </script>
+
+{% endblock %}

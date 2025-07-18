@@ -1,0 +1,106 @@
+{% extends 'layouts/web.layout.html.twig' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+    <div class="min-h-screen bg-gray-950 text-white flex flex-col">
+
+        {% include "/web/header.html.twig" %}
+
+        <div class="flex-1 py-12 px-4">
+            <div class="container mx-auto max-w-6xl">
+                <div class="mb-8">
+                    <h1 class="text-3xl font-bold mb-2">Checkout</h1>
+                    <nav class="flex items-center space-x-2 text-sm text-gray-400">
+                        <a href="{{ route("store") }}" class="hover:text-white">Store</a>
+                        <i class="ri-arrow-right-s-line"></i>
+                        <span>Checkout</span>
+                    </nav>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2">
+                        <form class="space-y-8">
+
+                            <div id="errorBox" class="flex items-center p-4 mb-4 bg-gray-700 border border-gray-700 text-red-400 px-4 py-3 rounded relative" role="alert">
+                                <svg class="shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                                </svg>
+                                <div id="errorMsg" class="ms-3 text-sm font-medium">Store is unavailable right now</div>
+                            </div>
+
+                            <div class="bg-gray-800 rounded-lg p-6">
+                                <h2 class="text-xl font-semibold mb-4">Payment Method</h2>
+                                <div class="space-y-4">
+                                    <div class="flex items-center space-x-3 p-4 border border-gray-600 rounded-lg">
+                                        <input type="radio" id="paypal" name="payment" value="paypal" class="w-4 h-4 text-purple-600 focus:ring-purple-500" checked />
+                                        <label for="paypal" class="flex items-center space-x-3 cursor-pointer">
+                                            <i class="ri-paypal-line text-2xl text-blue-500"></i>
+                                            <div>
+                                                <p class="font-medium">PayPal</p>
+                                                <p class="text-sm text-gray-400">Pay securely with your PayPal account</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 rounded-lg text-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all whitespace-nowrap" disabled>
+                                Complete Purchase with PayPal
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="lg:col-span-1">
+                        <div class="bg-gray-800 rounded-lg p-6 sticky top-24">
+                            <h2 class="text-xl font-semibold mb-4">Order Summary</h2>
+
+                            <div class="space-y-4 mb-6">
+                                {% for item in items %}
+                                    <div class="flex justify-between items-center">
+                                        <p class="font-medium">{{ item.Name }}</p>
+                                        <p class="text-sm text-gray-400">Qty: {{ item.Quantity }}</p>
+                                    </div>
+                                {% endfor %}
+
+                                <div class="flex justify-between">
+                                    <span>Gold:</span>
+                                    <span>+{{ store["Gold"] }}</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Coins:</span>
+                                    <span>+{{ store["Coins"] }}</span>
+                                </div>
+                            </div>
+
+                            <div class="border-t border-gray-700 pt-4 space-y-2">
+                                <div class="flex justify-between text-lg font-semibold pt-2">
+                                    <span>Total:</span>
+                                    <span>${{ store["Price"] }}</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 p-4 bg-green-900/20 border border-green-500/30 rounded-lg">
+                                <div class="flex items-center space-x-2 text-green-400">
+                                    <i class="ri-shield-check-line"></i>
+                                    <span class="text-sm font-medium">Secure Payment</span>
+                                </div>
+                                <p class="text-xs text-green-300 mt-1">
+                                    Your payment information is encrypted and secure
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% include "web/footer.html.twig" %}
+
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+
+
+{% endblock %}

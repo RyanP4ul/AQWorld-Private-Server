@@ -1,0 +1,26 @@
+{
+    "name": "leght/game",
+    "description": "Modern Website",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Leght\\Game\\": "public/",
+            "App\\": "app/",
+            "Templates\\": "templates/",
+            "Database\\": "database/"
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "twig/twig": "^3.10",
+        "nikic/fast-route": "^1.3",
+        "ext-curl": "*",
+      "ext-pdo": "*"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}

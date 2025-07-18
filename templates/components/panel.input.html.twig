@@ -1,0 +1,19 @@
+<div class="col-md-{{ col }}">
+    <div class="form-group">
+        {% if type == "checkbox"  %}
+            <div class="form-group clearfix">
+                <div class="icheck-primary d-inline">
+                    <input type="checkbox" name="{{ name }}" id="_{{ name }}">
+                    <label for="_{{ name }}">
+                        {{ name }}
+                    </label>
+                </div>
+            </div>
+
+        {% else %}
+            <label for="_{{ name }}">{{ name }}:{% if isRequired == 1 %}<small class="text-md text-danger">*</small>{% endif %}</label>
+            <input id="_{{ name }}" type="{{ type }}" name="{{ name }}" class="form-control" {% if value != "" %} value="{{ value }}" {% endif %} {% if placeHolder != "" %} placeholder="{{ placeHolder }}{% endif %}">
+            <span id="{{ name }}-error" class="text-sm"></span>
+        {% endif %}
+    </div>
+</div>

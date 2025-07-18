@@ -1,0 +1,242 @@
+{% extends "layouts/panel.html.twig" %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block styles %}
+    {% include "/styles/datatables.html.twig" %}
+{% endblock %}
+
+{% block content %}
+
+    {% include "/components/panel.modal-form.html.twig" with {
+        id: "modal",
+        size: "modal-xl",
+        forms: {
+            id: { col: "6", type: "number", placeHolder: "Id", isRequired: 1 },
+            Name: { col: "6", type: "text", placeHolder: "Name", isRequired: 1 },
+            Description: { col: "6", type: "textarea", placeHolder: "Description", isRequired: 1 },
+            EndText: { col: "6", type: "textarea", placeHolder: "End Text", isRequired: 1 },
+
+            Experience: { col: "3", type: "number", placeHolder: "Experience", value: "0", isRequired: 1 },
+            Gold: { col: "3", type: "number", placeHolder: "Gold", value: "0", isRequired: 1 },
+            Coins: { col: "3", type: "number", placeHolder: "Coins", value: "0", isRequired: 1 },
+            Reputation: { col: "3", type: "number", placeHolder: "Reputation", value: "0", isRequired: 1 },
+            ClassPoints: { col: "3", type: "number", placeHolder: "ClassPoints", value: "0", isRequired: 1 },
+
+            RewardType: { col: "3", type: "text", placeHolder:"Reward Type", value: "S", isRequired: 1 },
+
+            Level: { col: "3", type: "number", placeHolder: "Level", value: "1", isRequired: 1 },
+            Slot: { col: "3", type: "number", placeHolder: "Slot", value: "-1", isRequired: 1 },
+            Value: { col: "3", type: "number", placeHolder: "Value", value: "0", isRequired: 1 },
+            Field: { col: "3", type: "text", placeHolder: "Field", isRequired: 1 },
+            Index: { col: "3", type: "number", placeHolder: "Index",  value: "-1", isRequired: 1 },
+
+            WarID: { col: "3", type: "number", placeHolder: "WarID", isRequired: 1 },
+            AchievementID: { col: "3", type: "number", placeHolder: "AchievementID", isRequired: 1 },
+            TitleID: { col: "3", type: "number", placeHolder: "TitleID", isRequired: 1 },
+            FactionID: { col: "3", type: "number", placeHolder: "FactionID", value: "1", isRequired: 1 },
+            WarMega: { col: "3", type: "number", placeHolder: "WarMega", value: "0", isRequired: 1 },
+            ReqReputation: { col: "3", type: "number", placeHolder: "ReqReputation", value: "0", isRequired: 1 },
+            ReqClassID: { col: "3", type: "number", placeHolder: "ReqClassID", value: "0", isRequired: 1 },
+            ReqClassPoints: { col: "3", type: "number", placeHolder: "ReqClassPoints", value: "0", isRequired: 1 }
+        }
+    } %}
+
+    {% include "/components/panel.modal-delete.html.twig" %}
+
+    <section class="content">
+        <div class="container-fluid">
+
+            {% include "/components/panel.announcement.html.twig" %}
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title text-lg">Total {{ title }}: {{ total }}</h3>
+
+                    <div class="card-tools">
+                        <button type="button" id="btn-refresh" class="btn btn-round btn-primary waves-effect">
+                            <i class="fas fa-bolt pr-2"></i>
+                            Refresh
+                        </button>
+                        <button type="button" id="btn-insert" class="btn btn-round btn-success" data-toggle="modal" data-target="#modal">
+                            <i class="fa fa-plus pr-2"></i>
+                            Add new {{ title }}
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <table id="datatable" class="table table-striped projects">
+                        <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Name</th>
+                            <th>Gold</th>
+                            <th>Coins</th>
+                            <th>Level</th>
+                            <th>RewardType</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+
+    {% include "/scripts/datatables.html.twig" %}
+
+    <script>
+        $(document).ready(() => {
+            const MODAL_DIALOG = $("#modal");
+            const DELETE_MODAL = $("#deleteModal");
+            const MODAL_BTN = $("#modal-btn");
+            const INPUTS = $("#inputs input, #inputs select");
+            const FORM = $('#form');
+            const DATATABLE = $('#datatable').DataTable({
+                processing: true,
+                autoWidth: false,
+                responsive: true,
+                ajax: "{{ route('panel.quests') }}",
+                lengthMenu: [ [20, 40, 80, 100, 150], [20, 40, 80, 100, 150] ],
+                columns: [
+                    { data: "id" },
+                    { data: "Name" },
+                    { data: "Gold" },
+                    { data: "Coins" },
+                    { data: "Level" },
+                    { data: "RewardType" },
+                    { data: "Action" }
+                ],
+            });
+
+            let id = -1;
+            let type = "insert";
+
+            const resetDialog = () => {
+                INPUTS.each(function() {
+                    const name = $(this).attr("name");
+                    const child = $(`#_${name}`);
+
+                    if (!child.length) return;
+
+                    switch ($(this).attr("type")) {
+                        case "text":
+                        case "number":
+                            child.val($(this).attr("value") || "");
+                            break;
+                        case "checkbox":
+                            if (child.is(":checked")) child.click();
+                            break;
+                    }
+                });
+
+                $('.form-control').removeClass('is-invalid');
+                $('.text-sm').text("").removeClass('invalid-feedback');
+            };
+
+            const showModal = (btnText) => {
+                MODAL_BTN.text(btnText);
+                MODAL_DIALOG.modal("show");
+            };
+
+            $('body')
+                .on('click', '#btn-refresh', () => {
+                    DATATABLE.ajax.reload();
+                    toastr.success("Refreshing Datatables...");
+                })
+                .on('click', '#btn-insert', () => {
+                    id = -1;
+                    type = "insert";
+                    resetDialog();
+
+                    $.get(`/auto_increment?t=quests`, (data) => {
+                        $('#_id').val(data);
+                    });
+
+                    showModal("Insert");
+                })
+                .on('click', '#btn-edit', function() {
+                    id = $(this).data('id');
+                    type = "update";
+                    resetDialog();
+
+                    $.get(`/panel/quests/edit?id=${id}`, (data) => {
+                        INPUTS.each(function() {
+                            const name = $(this).attr("name");
+                            const child = $(`#_${name}`);
+
+                            if (["Upgrade", "Once"].includes(name)) {
+                                if ((data[name] === 1 && !child.is(":checked")) || (data[name] === 0 && child.is(":checked"))) {
+                                    child.click();
+                                }
+                            } else {
+                                child.val(data[name]);
+                            }
+                        });
+
+                        showModal("Update");
+                    });
+                })
+                .on('click', '#btn-delete', function() {
+                    id = $(this).data('id');
+                    DELETE_MODAL.modal('show');
+                })
+                .on('click', '#confirmDelete', function() {
+                    $.ajax({
+                        url: `/panel/quests/delete?id=${id}`,
+                        type: "GET",
+                        dataType: "json",
+                        success: (data) => {
+                            DATATABLE.ajax.reload();
+                            DELETE_MODAL.modal("hide");
+                            toastr.success(data.msg[0]);
+                        },
+                        error: () => toastr.error("An error occurred while deleting the record.")
+                    });
+                });
+
+            FORM.on("submit", (e) => {
+                e.preventDefault();
+
+                $.ajax({
+                    url: `/panel/quests/save?type=${type}&oldId=${id}`,
+                    type: "POST",
+                    data: new FormData(FORM[0]),
+                    dataType: "json",
+                    processData: false,
+                    contentType: false,
+                    beforeSend: () => {
+                        $('.form-control').removeClass('is-invalid');
+                        $('.text-sm').removeClass('invalid-feedback').text("");
+                    },
+                    error: (data) => {
+                        if (typeof data.responseJSON.msg === 'object' && !Array.isArray(data.responseJSON.msg))
+                        {
+                            $.each(data.responseJSON.msg, (key, value) => {
+                                const INPUT = $(`#_${key}`);
+                                const ERR = $(`#${key}-error`);
+
+                                INPUT.addClass('is-invalid');
+                                ERR.text(value[0]).addClass('invalid-feedback');
+                            });
+                        }
+                        else
+                        {
+                            console.log(data.responseJSON.msg);
+                        }
+                    },
+                    success: (data) => {
+                        DATATABLE.ajax.reload();
+                        MODAL_DIALOG.modal("hide");
+                        toastr.success(data.msg[0]);
+                    }
+                });
+            });
+
+        });
+    </script>
+
+{% endblock %}

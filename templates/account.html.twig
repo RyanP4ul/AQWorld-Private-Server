@@ -1,0 +1,335 @@
+{% extends "layouts/web.layout.html.twig" %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+    <div class="min-h-screen bg-gray-950 text-white flex flex-col">
+
+        {% include "/web/header.html.twig" %}
+
+        <main class="flex-1 py-12 px-4">
+            <div class="container mx-auto max-w-4xl">
+                <h1 class="text-3xl font-bold mb-8">Account Settings</h1>
+
+                <div id="alertBox" style="display: none;"
+                     class="flex items-center p-4 mb-4 px-4 py-3 rounded relative border text-sm font-medium"
+                     role="alert">
+                    <svg id="alertIcon" class="shrink-0 w-4 h-4" aria-hidden="true"
+                         xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                    </svg>
+                    <div id="alertMsg" class="ms-3"></div>
+                </div>
+
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+
+                    <div class="border-b border-gray-800">
+                        <nav class="flex space-x-8 px-6">
+                            <button id="tab-profile">Profile</button>
+                            <button id="tab-security">Security</button>
+                            <button id="tab-history">History</button>
+                        </nav>
+                    </div>
+
+                    <div class="p-6">
+
+                        <div id="panel-profile">
+                            <div class="space-y-6">
+                                <div class="flex items-center space-x-6">
+                                    <div class="w-20 h-20 bg-gray-800 rounded-full flex items-center justify-center">
+                                        <i class="ri-user-line text-3xl text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h2 class="text-2xl font-bold">{{ account.Name }}</h2>
+                                        <p class="text-gray-400">Level {{ account.Level }} Warrior</p>
+                                        <div class="flex items-center space-x-4 mt-2">
+                                            <span class="text-sm text-green-400">
+                                              <i class="ri-checkbox-circle-fill mr-1"></i>
+                                              Email Verified
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-300 mb-2">Username</label>
+                                        <input type="text" value="{{ account.Name }}" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white text-sm" disabled/>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                                        <input type="email" value="{{ account.Email }}" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white text-sm" disabled/>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-300 mb-2">Last Area</label>
+                                        <input type="email" value="{{ account.LastArea }}" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white text-sm" disabled/>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-300 mb-2">Date Created</label>
+                                        <input type="email" value="{{ account.DateCreated }}" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white text-sm" disabled/>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div id="panel-security" style="display:none">
+                            <div class="space-y-8">
+                                <div class="bg-gray-800 rounded-lg p-6">
+                                    <h3 class="text-lg font-semibold mb-4">Change Password</h3>
+
+                                    <form id="passwordForm" class="space-y-4">
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-300 mb-2">Current Password</label>
+                                            <input type="password" name="current_password" placeholder="Current Password" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent text-white text-sm" required/>
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-300 mb-2">New Password</label>
+                                            <input type="password" name="new_password" placeholder="New Password" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent text-white text-sm" required/>
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-300 mb-2">Confirm New Password</label>
+                                            <input type="password" name="confirm_new_password" placeholder="Confirm New Password" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent text-white text-sm" required/>
+                                        </div>
+
+                                        <div class="g-recaptcha" data-sitekey="{{ config("GOGGLE_RECAPTCHA_SITE_KEY") }}"></div>
+
+                                        <button type="submit" class="bg-gray-700 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition-colors whitespace-nowrap">
+                                            Update Password
+                                        </button>
+                                    </form>
+                                </div>
+
+                                <div class="bg-gray-800 rounded-lg p-6">
+                                    <h3 class="text-lg font-semibold mb-4">Discord Integration</h3>
+
+                                    {% if isDiscordConnected %}
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center">
+                                                    <i class="ri-discord-fill text-white text-xl"></i>
+                                                </div>
+                                                <div>
+                                                    <p class="text-white">Discord Connected</p>
+                                                    <p class="text-xs text-green-400 mt-1">
+                                                        <i class="ri-checkbox-circle-fill mr-1"></i>
+                                                        Verified Discord Account
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="flex space-x-2">
+                                                <button onclick="openModal()" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors text-sm whitespace-nowrap">
+                                                    Disconnect
+                                                </button>
+                                            </div>
+                                        </div>
+                                    {% else %}
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center">
+                                                    <i class="ri-discord-line text-gray-400 text-xl"></i>
+                                                </div>
+                                                <div>
+                                                    <p class="text-gray-400">Discord Not Connected</p>
+                                                    <p class="text-sm text-gray-500">Connect your Discord account for exclusive benefits</p>
+                                                </div>
+                                            </div>
+                                            <a
+                                                    href="https://discord.com/api/oauth2/authorize?client_id={{ config("DISCORD_CLIENT_ID") }}&redirect_uri={{ config("APP_URL") }}/discord/callback&response_type=code&scope={{ config("DISCORD_SCOPE") }}"
+                                                    class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors text-sm whitespace-nowrap"
+                                            >
+                                                Connect Discord
+                                            </a>
+                                        </div>
+                                    {% endif %}
+                                    <div class="mt-4 p-4 bg-gray-700 rounded-lg">
+                                        <h4 class="text-white font-medium mb-2">Discord Benefits</h4>
+                                        <ul class="text-sm text-gray-300 space-y-1">
+                                            <li class="flex items-center">
+                                                <i class="ri-check-line text-green-400 mr-2"></i>
+                                                Exclusive Discord-only rewards
+                                            </li>
+                                            <li class="flex items-center">
+                                                <i class="ri-check-line text-green-400 mr-2"></i>
+                                                Real-time game notifications
+                                            </li>
+                                            <li class="flex items-center">
+                                                <i class="ri-check-line text-green-400 mr-2"></i>
+                                                Community events access
+                                            </li>
+                                            <li class="flex items-center">
+                                                <i class="ri-check-line text-green-400 mr-2"></i>
+                                                Direct support channel
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="panel-history" style="display:none">
+                        <h1 class="text-center p-5">No History</h1>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div id="modalDiscord" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+            <div class="bg-gray-900 rounded-lg max-w-md w-full p-6">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-discord-fill text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Disconnect Discord?</h3>
+                    <p class="text-gray-400 mb-6">
+                        You'll lose access to Discord-exclusive rewards, notifications, and community features. You can reconnect anytime.
+                    </p>
+                    <div class="flex space-x-3">
+                        <button
+                                id="modalCancel"
+                                onclick="closeModal()"
+                                class="flex-1 bg-gray-800 text-white px-4 py-3 rounded-lg hover:bg-gray-700 transition-colors whitespace-nowrap"
+                        >
+                        Cancel
+                        </button>
+                        <a
+                                href="{{ route("auth.discord.disconnect") }}"
+                                class="flex-1 bg-red-600 text-white px-4 py-3 rounded-lg hover:bg-red-700 transition-colors whitespace-nowrap"
+                        >
+                            Disconnect
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% include "web/footer.html.twig" %}
+
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script type="module">
+        import { signal, effect } from "https://esm.sh/@preact/signals";
+
+        const activeTab = signal("profile");
+        const showDiscordDisconnectModal = signal(false);
+        const modalCancel = document.getElementById("modalCancel");
+        const modalDiscord = document.getElementById("modalDiscord");
+
+        const tabButtons = {
+            profile: document.getElementById("tab-profile"),
+            security: document.getElementById("tab-security"),
+            history: document.getElementById("tab-history"),
+        };
+
+        tabButtons.profile.addEventListener("click", () => activeTab.value = "profile");
+        tabButtons.security.addEventListener("click", () => activeTab.value = "security");
+        tabButtons.history.addEventListener("click", () => activeTab.value = "history");
+
+        const tabPanels = {
+            profile: document.getElementById("panel-profile"),
+            security: document.getElementById("panel-security"),
+            history: document.getElementById("panel-history"),
+        };
+
+        activeTab.subscribe((tab) => {
+            for (const key in tabButtons) {
+                const isActive = (key === tab);
+                tabButtons[key].className = isActive
+                    ? "py-4 px-1 border-b-2 font-medium text-sm whitespace-nowrap border-gray-500 text-gray-400"
+                    : "py-4 px-1 border-b-2 font-medium text-sm whitespace-nowrap border-transparent text-gray-400 hover:text-white";
+            }
+            for (const key in tabPanels) {
+                tabPanels[key].style.display = (key === tab ? "block" : "none");
+            }
+        });
+
+        activeTab.value = "profile";
+
+        window.openModal = function () {
+            modalDiscord.classList.remove('hidden');
+        };
+
+        window.closeModal = function () {
+            modalDiscord.classList.add('hidden');
+        };
+
+        $(document).ready(() => {
+            const FORM = $('#passwordForm');
+
+            const alertBox = document.getElementById('alertBox');
+            const alertMsg = document.getElementById('alertMsg');
+            const alertIcon = document.getElementById('alertIcon');
+
+            const alert = signal({ type: "", msg: "" });
+
+            const urlParams = new URLSearchParams(window.location.search);
+
+            if (urlParams.get("error")) {
+                const msg = decodeURIComponent(urlParams.get("error"));
+                alert.value = { type: "error", msg };
+
+                if (window.history.replaceState) {
+                    const cleanUrl = window.location.origin + window.location.pathname;
+                    window.history.replaceState({}, document.title, cleanUrl);
+                }
+            }
+
+            effect(() => {
+                const { type, msg } = alert.value;
+
+                if (msg) {
+                    alertBox.style.display = 'flex';
+                    alertMsg.textContent = msg;
+
+                    alertBox.className = "flex items-center p-4 mb-4 px-4 py-3 rounded relative border text-sm font-medium";
+
+                    if (type === "error") {
+                        alertBox.classList.add("bg-gray-700", "text-red-400", "border-gray-700");
+                        alertIcon.innerHTML = `<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>`;
+                    } else if (type === "success") {
+                        alertBox.classList.add("bg-gray-700", "text-green-400", "border-gray-700");
+                        alertIcon.innerHTML = `<path d="M16.707 5.293a1 1 0 0 0-1.414 0L8 12.586 4.707 9.293a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l8-8a1 1 0 0 0 0-1.414Z"/>`;
+                    }
+
+                } else {
+                    alertBox.style.display = 'none';
+                }
+
+
+            });
+
+            FORM.on("submit", (e) => {
+                e.preventDefault();
+
+                alert.value = {type: "", msg: ""}; // clear
+
+                $.ajax({
+                    url: `{{ route("auth.change.password") }}`,
+                    type: "POST",
+                    data: new FormData(FORM[0]),
+                    dataType: "json",
+                    processData: false,
+                    contentType: false,
+                    error: (xhr) => {
+                        const msg = xhr.responseJSON?.msg || "Unknown error occurred.";
+                        alert.value = { type: "error", msg };
+                    },
+                    success: (data) => {
+                        const msg = data.msg || "Success.";
+                        alert.value = { type: "success", msg: msg };
+                    }
+                });
+            });
+        });
+    </script>
+
+
+{% endblock %}

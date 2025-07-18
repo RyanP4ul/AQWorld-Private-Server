@@ -1,0 +1,11 @@
+<div class="col-md-{{ col }}">
+    <div class="form-group">
+        <label>{{ name }}</label>
+        <select id="_{{ name }}" name="{{ name }}" class="form-control select2" style="width: 100%;">
+            <option selected="selected">None</option>
+            {% for option in options %}
+                <option name="{{ option.id }}">{{ option.Name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+</div>

@@ -1,0 +1,179 @@
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="/" class="brand-link">
+        <img src="/assets/images/logo.png" alt="SilverAQ" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">{{ config.APP_NAME }}</span>
+    </a>
+
+    <div class="sidebar">
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+                <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2 mt-2" alt="User Image">
+            </div>
+            <div class="info">
+                <a href="#" class="d-block text-uppercase">{{ auth("name") }}</a>
+                <span>{% if (auth("access") == 60) %}<font color="red">Administrator</font>{% else %}<font color="orange">Moderator</font>{% endif %}</span>
+            </div>
+        </div>
+
+        <div class="form-inline">
+            <div class="input-group" data-widget="sidebar-search">
+                <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <button class="btn btn-sidebar">
+                        <i class="fas fa-search fa-fw"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent nav-legacy" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-header">MAIN</li>
+                {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Dashboard", link: route('panel.dashboard'), activeRoute: "/panel", iconClass: "nav-icon fas fa-chart-line" } %}
+                {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Users", link: route('panel.users'), activeRoute: "/panel/users", iconClass: "nav-icon fas fa-users" } %}
+
+                <li class="nav-header">LOGS</li>
+                {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Auctions", link: route('panel.functions'), activeRoute: "/panel/functions", iconClass: "nav-icon fas fa-image", disabled:true } %}
+                {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Trade Logs", link: route('panel.functions'), activeRoute: "/panel/functions", iconClass: "nav-icon fas fa-code", disabled:true } %}
+
+                <li class="nav-header">TABLES</li>
+
+                {% if auth("access") == 60 %}
+                    <li class="nav-item {% if route('current') == '/panel/auras' or route('current') == '/panel/effects' %}menu-open{% endif %}">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-bolt"></i>
+                            <p>Auras<i class="right fas fa-angle-left"></i></p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Auras", link: route('panel.auras'), activeRoute: "/panel/auras", iconClass: "nav-icon far fa-circle" } %}
+                            {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Auras Effect", link: route('panel.effects'), activeRoute: "/panel/effects", iconClass: "nav-icon far fa-circle" } %}
+                        </ul>
+                    </li>
+
+                {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Classes", link: route('panel.classes'), activeRoute: "/panel/classes", iconClass: "nav-icon fas fa-th" } %}
+
+                {% endif %}
+
+                <li class="nav-item {% if route('current') == '/panel/enhancement' or route('current') == '/panel/patterns' %}menu-open{% endif %}">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>Enhancements<i class="right fas fa-angle-left"></i></p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Enhancements", link: route('panel.enhancement'), activeRoute: "/panel/enhancement", iconClass: "nav-icon far fa-circle" } %}
+                        {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Patterns", link: route('panel.patterns'), activeRoute: "/panel/patterns", iconClass: "nav-icon far fa-circle" } %}
+                    </ul>
+                </li>
+
+                {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Factions", link: route('panel.factions'), activeRoute: "/panel/factions", iconClass: "nav-icon fas fa-bookmark" } %}
+                {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Global Drops", link: route('panel.globaldrops'), activeRoute: "/panel/globaldrops", iconClass: "nav-icon fas fa-gift" } %}
+
+                <li class="nav-item {% if route('current') == '/panel/items' or route('current') == '/panel/items/requirements' or route('current') == '/panel/items/skills' %}menu-open{% endif %}">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-list"></i>
+                        <p>Items<i class="right fas fa-angle-left"></i></p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Items", link: route('panel.items'), activeRoute: "/panel/items", iconClass: "nav-icon far fa-circle" } %}
+                        {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Items Requirements", link: route('panel.items.requirements'), activeRoute: "/panel/items/requirements", iconClass: "nav-icon far fa-circle" } %}
+
+                        {% if auth("access") == 60 %}
+                            {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Items Skills", link: route('panel.items.skills'), activeRoute: "/panel/items/skills", iconClass: "nav-icon far fa-circle" } %}
+                        {% endif %}
+
+                    </ul>
+                </li>
+
+                <li class="nav-item {% if route('current') == '/panel/maps' or route('current') == '/panel/maps/items' or route('current') == '/panel/maps/monsters' %}menu-open{% endif %}">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-map"></i>
+                        <p>Maps<i class="right fas fa-angle-left"></i></p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Maps", link: route('panel.maps'), activeRoute: "/panel/maps", iconClass: "nav-icon far fa-circle" } %}
+                        {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Maps Items", link: route('panel.maps.items'), activeRoute: "/panel/maps/items", iconClass: "nav-icon far fa-circle" } %}
+                        {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Maps Monsters", link: route('panel.maps.monsters'), activeRoute: "/panel/maps/monsters", iconClass: "nav-icon far fa-circle" } %}
+                    </ul>
+                </li>
+
+                <li class="nav-item {% if route('current') == '/panel/monsters' or route('current') == '/panel/monsters/bosses' or route('current') == '/panel/monsters/drops' or route('current') == '/panel/monsters/skills' %}menu-open{% endif %}">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-skull"></i>
+                        <p>Monsters<i class="right fas fa-angle-left"></i></p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Monsters", link: route('panel.monsters'), activeRoute: "/panel/monsters", iconClass: "nav-icon far fa-circle" } %}
+                        {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Monsters Drops", link: route('panel.monsters.drops'), activeRoute: "/panel/monsters/drops", iconClass: "nav-icon far fa-circle" } %}
+
+                        {% if auth("access") == 60 %}
+                            {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Monsters Bosses", link: route('panel.monsters.bosses'), activeRoute: "/panel/monsters/bosses", iconClass: "nav-icon far fa-circle" } %}
+                            {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Monsters Skills", link: route('panel.monsters.skills'), activeRoute: "/panel/monsters/skills", iconClass: "nav-icon far fa-circle" } %}
+                        {% endif %}
+                    </ul>
+                </li>
+
+                <li class="nav-item {% if route('current') == '/panel/quests' or route('current') == '/panel/quests/reqitem' or route('current') == '/panel/quests/requirements' or route('current') == '/panel/quests/rewards' %}menu-open{% endif %}">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-question"></i>
+                        <p>Quests<i class="right fas fa-angle-left"></i></p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Quests", link: route('panel.quests'), activeRoute: "/panel/quests", iconClass: "nav-icon far fa-circle" } %}
+                        {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Quests Req Items", link: route('panel.quests.reqitem'), activeRoute: "/panel/quests/reqitem", iconClass: "nav-icon far fa-circle" } %}
+                        {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Quests Requirements", link: route('panel.quests.requirements'), activeRoute: "/panel/quests/requirements", iconClass: "nav-icon far fa-circle" } %}
+                        {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Quests Rewards", link: route('panel.quests.rewards'), activeRoute: "/panel/quests/rewards", iconClass: "nav-icon far fa-circle" } %}
+                    </ul>
+                </li>
+
+                {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Redeems", link: route('panel.redeem'), activeRoute: "/panel/redeem", iconClass: "nav-icon fas fa-star" } %}
+
+                <li class="nav-item {% if route('current') == '/panel/shops' or route('current') == '/panel/shops/items' or route('current') == '/panel/shops/seasonal' %}menu-open{% endif %}">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-cart-plus"></i>
+                        <p>Shops<i class="right fas fa-angle-left"></i></p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Shops", link: route('panel.shops'), activeRoute: "/panel/shops", iconClass: "nav-icon far fa-circle" } %}
+                        {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Shops Items", link: route('panel.shops.items'), activeRoute: "/panel/shops/items", iconClass: "nav-icon far fa-circle" } %}
+                        {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Shops Seasonal", link: route('panel.shops.seasonal'), activeRoute: "/panel/shops/seasonal", iconClass: "nav-icon far fa-circle" } %}
+                    </ul>
+                </li>
+
+                {% if (auth("access") == 60) %}
+
+                    <li class="nav-item {% if route('current') == '/panel/skills' or route('current') == '/panel/skills/assign' or route('current') == '/panel/skills/auras' %}menu-open{% endif %}">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-bolt"></i>
+                            <p>Skills<i class="right fas fa-angle-left"></i></p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Skills", link: route('panel.skills'), activeRoute: "/panel/skills", iconClass: "nav-icon far fa-circle" } %}
+                            {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Skills Assign", link: route('panel.skills.assign'), activeRoute: "/panel/skills/assign", iconClass: "nav-icon far fa-circle" } %}
+                            {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Skills Auras", link: route('panel.skills.auras'), activeRoute: "/panel/skills/auras", iconClass: "nav-icon far fa-circle" } %}
+                        </ul>
+                    </li>
+
+                    {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Titles", link: route('panel.titles'), activeRoute: "/panel/titles", iconClass: "nav-icon fas fa-star" } %}
+
+                {% endif %}
+                {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Upload Files", link: route('panel.upload'), activeRoute: "/panel/upload", iconClass: "nav-icon fas fa-upload" } %}
+                {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Wheels", link: route('panel.wheels'), activeRoute: "/panel/wheels", iconClass: "nav-icon fas fa-dharmachakra" } %}
+
+
+{#                {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Characters", link: route('panel.user.characters'), activeRoute: "/panel/user/characters", iconClass: "nav-icon fas fa-user" } %}#}
+{#                {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Reports", link: route('panel.user.characters'), activeRoute: "/panel/user/characters", iconClass: "nav-icon fas fa-user" } %}#}
+
+{#                {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Swf to Image", link: route('panel.areas'), activeRoute: "/panel/swf", iconClass: "nav-icon fas fa-image" } %}#}
+{#                {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Upload Image", link: route('panel.areas'), activeRoute: "/panel/functions", iconClass: "nav-icon fas fa-map" } %}#}
+{#                {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Functions", link: route('panel.areas'), activeRoute: "/panel/functions", iconClass: "nav-icon fas fa-code" } %}#}
+{#                {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Help", link: route('panel.areas'), activeRoute: "/panel/functions", iconClass: "nav-icon fas fa-code" } %}#}
+
+                <li class="nav-header">OTHERS</li>
+                {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Swf To Image", link: route('panel'), activeRoute: "/panel", iconClass: "nav-icon fas fa-image", disabled:true } %}
+                {% include "/components/panel.sidebar-nav-item.html.twig" with { name: "Functions", link: route('panel.functions'), activeRoute: "/panel/functions", iconClass: "nav-icon fas fa-code", disabled:true } %}
+
+            </ul>
+        </nav>
+    </div>
+</aside>

@@ -1,0 +1,152 @@
+{% extends "layouts/panel.html.twig" %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <div class="small-box bg-gradient-gray-dark">
+                        <div class="inner">
+                            <h3>{{ totalRegisteredUsers }}</h3>
+                            <p>Total Registered Users</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-bag"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <div class="small-box bg-gradient-gray-dark">
+                        <div class="inner">
+                            <h3>{{ onlineUsers }}</h3>
+                            <p>Online Users</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-bag"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <div class="small-box bg-gradient-gray-dark">
+                        <div class="inner">
+                            <h3>{{ peakPlayerToday }}</h3>
+                            <p>Peak Players Today</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-bag"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <div class="small-box bg-gradient-gray-dark">
+                        <div class="inner">
+                            <h3>{{ totalItems }}</h3>
+                            <p>Total Items</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-bag"></i>
+                        </div>
+                        <a href="{{ route("panel.items") }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <div class="small-box bg-gradient-gray-dark">
+                        <div class="inner">
+                            <h3>{{ totalQuests }}</h3>
+                            <p>Total Quests</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-bag"></i>
+                        </div>
+                        <a href="{{ route("panel.quests") }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <div class="small-box bg-gradient-gray-dark">
+                        <div class="inner">
+                            <h3>{{ totalMonsters }}</h3>
+                            <p>Total Monsters</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-bag"></i>
+                        </div>
+                        <a href="{{ route("panel.monsters") }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <div class="small-box bg-gradient-gray-dark">
+                        <div class="inner">
+                            <h3>{{ totalMaps }}</h3>
+                            <p>Total Maps</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-bag"></i>
+                        </div>
+                        <a href="{{ route("panel.maps") }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <div class="small-box bg-gradient-gray-dark">
+                        <div class="inner">
+                            <h3>{{ totalTitles }}</h3>
+                            <p>Total Titles</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-bag"></i>
+                        </div>
+                        <a href="{{ route("panel.titles") }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-6">
+                    <div class="card">
+                        <div class="card-header border-transparent">
+                            <h3 class="card-title">Most Used Items / Equipped Items</h3>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table m-0">
+                                    <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Total Equipped</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for item in mostEquipped %}
+                                        <tr>
+                                            <td><a href="#">{{ item["Name"] }}</a></td>
+                                            <td>{{ item["total_equipped"] }}</td>
+                                        </tr>
+                                    {% endfor %}
+{#                                    <tr>#}
+{#                                        <td><a href="pages/examples/invoice.html">OR9842</a></td>#}
+{#                                        <td>Call of Duty IV</td>#}
+{#                                        <td><span class="badge badge-success">Shipped</span></td>#}
+{#                                        <td>#}
+{#                                            <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>#}
+{#                                        </td>#}
+{#                                    </tr>#}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}
+

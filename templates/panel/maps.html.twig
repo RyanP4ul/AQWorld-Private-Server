@@ -1,0 +1,248 @@
+{% extends "layouts/panel.html.twig" %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block styles %}
+    {% include "/styles/datatables.html.twig" %}
+{% endblock %}
+
+{% block content %}
+
+    {% include "/components/panel.modal-form.html.twig" with {
+        id: "modal",
+        size: "modal-xl",
+        forms: {
+            id: { col: "3", type: "number", placeHolder: "Id", isRequired: 1 },
+            Name: { col: "4", type: "text", placeHolder: "Name", isRequired: 1 },
+            File: {col: "4", type: "text", placeHolder: "ex (Name.swf)", isRequired: 1},
+            MaxPlayers: { col: "5", type: "number", value: "10" },
+            ReqLevel: { col: "6", type: "number", value: "1" },
+            ReqParty: { col: "3", type: "checkbox" },
+            Upgrade: { col: "3", type: "checkbox" },
+            Staff: { col: "3", type: "checkbox" },
+            PvP: { col: "3", type: "checkbox" },
+            WorldBoss: { col: "3", type: "checkbox" }
+        }
+    } %}
+
+    {% include "/components/panel.modal-delete.html.twig" %}
+
+    <section class="content">
+        <div class="container-fluid">
+
+            <div class="callout callout-warning mb-4">
+                <h5 class="fw-bold">Remainder</h5>
+                <p>Please make sure to upload the SWF into <a href="#" class="text-primary text-uppercase"><small>Swf to Image</small></a> after adding swf.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title text-lg">Total Maps: {{ total }}</h3>
+
+                    <div class="card-tools">
+                        <button type="button" id="btn-refresh" class="btn btn-round btn-primary waves-effect">
+                            <i class="fas fa-bolt pr-2"></i>
+                            Refresh
+                        </button>
+                        <button type="button" id="btn-insert" class="btn btn-round btn-success" data-toggle="modal" data-target="#modal">
+                            <i class="fa fa-plus pr-2"></i>
+                            Add new {{ title }}
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <table id="datatable" class="table table-striped projects">
+                        <thead>
+                        <tr>
+                            <th>id</th>
+{#                            <th>Image</th>#}
+                            <th>Name</th>
+                            <th>File</th>
+                            <th>MaxPlayers</th>
+                            <th>Tags</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+
+    {% include "/scripts/datatables.html.twig" %}
+
+    <script>
+        $(document).ready(() => {
+            const MODAL_DIALOG = $("#modal");
+            const DELETE_MODAL = $("#deleteModal");
+            const MODAL_BTN = $("#modal-btn");
+            const INPUTS = $("#inputs input");
+            const FORM = $('#form');
+            const DATATABLE = $('#datatable').DataTable({
+                processing: true,
+                autoWidth: false,
+                responsive: true,
+                lengthMenu: [ [20, 40, 80, 100, 150], [20, 40, 80, 100, 150] ],
+                ajax: {
+                    url: "{{ route('panel.maps') }}?type=all",
+                    data: function (d) {
+                        d.tag = $('#tagFilter').val();
+                    }
+                },
+                columns: [
+                    { data: "id" },
+                    // { data: "Image" },
+                    { data: "Name" },
+                    { data: "File" },
+                    { data: "MaxPlayers" },
+                    { data: "Tags" },
+                    { data: "Action" }
+                ],
+            });
+
+            $('#datatable_length').append(`
+                <label style="margin-left: 30px;">
+                  Filter by Tag:
+                  <select id="tagFilter" class="form-control input-sm" style="width: auto; display: inline-block; margin-left: 5px;">
+                    <option value="">All</option>
+                    <option value="Dungeon">Dungeon</option>
+                    <option value="Staff">Staff</option>
+                    <option value="WorldBoss">Staff</option>
+                  </select>
+                </label>
+            `);
+
+            $('#tagFilter').on('change', function () {
+                DATATABLE.ajax.url("{{ route('panel.maps') }}?type=" + $(this).val().toLowerCase()).load();
+            });
+
+            let id = -1;
+            let type = "insert";
+
+            const resetDialog = () => {
+                INPUTS.each(function() {
+                    const name = $(this).attr("name");
+                    const child = $(`#_${name}`);
+
+                    if (!child.length) return;
+
+                    switch ($(this).attr("type")) {
+                        case "text":
+                        case "number":
+                            child.val($(this).attr("value") || "");
+                            break;
+                        case "checkbox":
+                            if (child.is(":checked")) child.click();
+                            break;
+                    }
+                });
+
+                $('.form-control').removeClass('is-invalid');
+                $('.text-sm').text("").removeClass('invalid-feedback');
+            };
+
+            const showModal = (btnText) => {
+                MODAL_BTN.text(btnText);
+                MODAL_DIALOG.modal("show");
+            };
+
+            $('body')
+                .on('click', '#btn-refresh', () => {
+                    DATATABLE.ajax.reload();
+                    toastr.success("Refreshing Datatables...");
+                })
+                .on('click', '#btn-insert', () => {
+                    id = -1;
+                    type = "insert";
+                    resetDialog();
+
+                    $.get(`/auto_increment?t=maps`, (data) => {
+                        $('#_id').val(data);
+                    });
+
+                    showModal("Insert");
+                })
+                .on('click', '#btn-edit', function() {
+                    id = $(this).data('id');
+                    type = "update";
+                    resetDialog();
+
+                    $.get(`/panel/maps/edit?id=${id}`, (data) => {
+                        INPUTS.each(function() {
+                            const name = $(this).attr("name");
+                            const child = $(`#_${name}`);
+
+                            if (["ReqParty", "Upgrade", "Staff", "PvP", "WorldBoss"].includes(name)) {
+                                if ((data[name] === 1 && !child.is(":checked")) || (data[name] === 0 && child.is(":checked"))) {
+                                    child.click();
+                                }
+                            } else {
+                                child.val(data[name]);
+                            }
+                        });
+
+                        showModal("Update");
+                    });
+                })
+                .on('click', '#btn-delete', function() {
+                    id = $(this).data('id');
+                    DELETE_MODAL.modal('show');
+                })
+                .on('click', '#confirmDelete', function() {
+                    $.ajax({
+                        url: `/panel/maps/delete?id=${id}`,
+                        type: "GET",
+                        dataType: "json",
+                        success: (data) => {
+                            DATATABLE.ajax.reload();
+                            DELETE_MODAL.modal("hide");
+                            toastr.success(data.msg[0]);
+                        },
+                        error: () => toastr.error("An error occurred while deleting the record.")
+                    });
+                });
+
+            FORM.on("submit", (e) => {
+                e.preventDefault();
+
+                $.ajax({
+                    url: `/panel/maps/save?type=${type}&oldId=${id}`,
+                    type: "POST",
+                    data: new FormData(FORM[0]),
+                    dataType: "json",
+                    processData: false,
+                    contentType: false,
+                    beforeSend: () => {
+                        $('.form-control').removeClass('is-invalid');
+                        $('.text-sm').removeClass('invalid-feedback').text("");
+                    },
+                    error: (data) => {
+                        if (typeof data.responseJSON.msg === 'object' && !Array.isArray(data.responseJSON.msg))
+                        {
+                            $.each(data.responseJSON.msg, (key, value) => {
+                                const INPUT = $(`#_${key}`);
+                                const ERR = $(`#${key}-error`);
+
+                                INPUT.addClass('is-invalid');
+                                ERR.text(value[0]).addClass('invalid-feedback');
+                            });
+                        }
+                        else
+                        {
+                            console.log(data.responseJSON.msg);
+                        }
+                    },
+                    success: (data) => {
+                        DATATABLE.ajax.reload();
+                        MODAL_DIALOG.modal("hide");
+                        toastr.success(data.msg[0]);
+                    }
+                });
+            });
+
+        });
+    </script>
+{% endblock %}

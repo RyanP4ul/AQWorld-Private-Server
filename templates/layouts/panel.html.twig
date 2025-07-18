@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Admindek Bootstrap admin template made using Bootstrap 4 and it has huge amount of ready made feature, UI components, pages which completely fulfills any dashboard needs." />
+    <meta name="keywords" content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
+    <meta name="author" content="leght" />
+
+    <title>{% block title %}{% endblock %} - SuckIt</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/dist/css/adminlte.min.css">
+
+    {% block styles %}{% endblock %}
+
+</head>
+
+<body class="layout-fixed control-sidebar-slide-open sidebar-mini-md sidebar-mini">
+<div class="wrapper">
+
+    {% include "/components/panel.nav.html.twig" %}
+    {% include "/components/panel.sidebar.html.twig" %}
+
+    <div class="content-wrapper">
+        {% include "/components/panel.app-content-header.html.twig" %}
+
+        {% block content %}{% endblock %}
+    </div>
+
+    {% include "/components/panel.footer.html.twig" %}
+</div>
+
+<script src="/plugins/jquery/jquery.min.js"></script>
+<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/dist/js/adminlte.min.js"></script>
+
+{% block scripts %}{% endblock %}
+
+</body>
+</html>

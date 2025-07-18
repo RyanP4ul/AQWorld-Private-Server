@@ -1,0 +1,5273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="aqworlds@127.0.0.1">
+  <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.49">
+    <root id="1">
+      <DefaultCasing>lower/lower</DefaultCasing>
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <Grants>|root||root||ALTER|G
+|root||root|127.0.0.1|ALTER|G
+|root||root|::1|ALTER|G
+|root||root|laptop-0ma0q01i|ALTER|G
+|root||root|localhost|ALTER|G
+|root||root||ALTER ROUTINE|G
+|root||root|127.0.0.1|ALTER ROUTINE|G
+|root||root|::1|ALTER ROUTINE|G
+|root||root|laptop-0ma0q01i|ALTER ROUTINE|G
+|root||root|localhost|ALTER ROUTINE|G
+|root||root||CREATE|G
+|root||root|127.0.0.1|CREATE|G
+|root||root|::1|CREATE|G
+|root||root|laptop-0ma0q01i|CREATE|G
+|root||root|localhost|CREATE|G
+|root||root||CREATE ROUTINE|G
+|root||root|127.0.0.1|CREATE ROUTINE|G
+|root||root|::1|CREATE ROUTINE|G
+|root||root|laptop-0ma0q01i|CREATE ROUTINE|G
+|root||root|localhost|CREATE ROUTINE|G
+|root||root||CREATE TABLESPACE|G
+|root||root|127.0.0.1|CREATE TABLESPACE|G
+|root||root|::1|CREATE TABLESPACE|G
+|root||root|laptop-0ma0q01i|CREATE TABLESPACE|G
+|root||root|localhost|CREATE TABLESPACE|G
+|root||root||CREATE TEMPORARY TABLES|G
+|root||root|127.0.0.1|CREATE TEMPORARY TABLES|G
+|root||root|::1|CREATE TEMPORARY TABLES|G
+|root||root|laptop-0ma0q01i|CREATE TEMPORARY TABLES|G
+|root||root|localhost|CREATE TEMPORARY TABLES|G
+|root||root||CREATE USER|G
+|root||root|127.0.0.1|CREATE USER|G
+|root||root|::1|CREATE USER|G
+|root||root|laptop-0ma0q01i|CREATE USER|G
+|root||root|localhost|CREATE USER|G
+|root||root||CREATE VIEW|G
+|root||root|127.0.0.1|CREATE VIEW|G
+|root||root|::1|CREATE VIEW|G
+|root||root|laptop-0ma0q01i|CREATE VIEW|G
+|root||root|localhost|CREATE VIEW|G
+|root||leght||DELETE|G
+|root||root||DELETE|G
+|root||root|127.0.0.1|DELETE|G
+|root||root|::1|DELETE|G
+|root||root|laptop-0ma0q01i|DELETE|G
+|root||root|localhost|DELETE|G
+|root||root||DELETE HISTORY|G
+|root||root|127.0.0.1|DELETE HISTORY|G
+|root||root|::1|DELETE HISTORY|G
+|root||root|laptop-0ma0q01i|DELETE HISTORY|G
+|root||root|localhost|DELETE HISTORY|G
+|root||root||DROP|G
+|root||root|127.0.0.1|DROP|G
+|root||root|::1|DROP|G
+|root||root|laptop-0ma0q01i|DROP|G
+|root||root|localhost|DROP|G
+|root||root||EVENT|G
+|root||root|127.0.0.1|EVENT|G
+|root||root|::1|EVENT|G
+|root||root|laptop-0ma0q01i|EVENT|G
+|root||root|localhost|EVENT|G
+|root||root||EXECUTE|G
+|root||root|127.0.0.1|EXECUTE|G
+|root||root|::1|EXECUTE|G
+|root||root|laptop-0ma0q01i|EXECUTE|G
+|root||root|localhost|EXECUTE|G
+|root||root||FILE|G
+|root||root|127.0.0.1|FILE|G
+|root||root|::1|FILE|G
+|root||root|laptop-0ma0q01i|FILE|G
+|root||root|localhost|FILE|G
+|root||root||INDEX|G
+|root||root|127.0.0.1|INDEX|G
+|root||root|::1|INDEX|G
+|root||root|laptop-0ma0q01i|INDEX|G
+|root||root|localhost|INDEX|G
+|root||_insert_only_host_user_||INSERT|G
+|root||leght||INSERT|G
+|root||root||INSERT|G
+|root||root|127.0.0.1|INSERT|G
+|root||root|::1|INSERT|G
+|root||root|laptop-0ma0q01i|INSERT|G
+|root||root|localhost|INSERT|G
+|root||root||LOCK TABLES|G
+|root||root|127.0.0.1|LOCK TABLES|G
+|root||root|::1|LOCK TABLES|G
+|root||root|laptop-0ma0q01i|LOCK TABLES|G
+|root||root|localhost|LOCK TABLES|G
+|root||root||PROCESS|G
+|root||root|127.0.0.1|PROCESS|G
+|root||root|::1|PROCESS|G
+|root||root|laptop-0ma0q01i|PROCESS|G
+|root||root|localhost|PROCESS|G
+|root||root||REFERENCES|G
+|root||root|127.0.0.1|REFERENCES|G
+|root||root|::1|REFERENCES|G
+|root||root|laptop-0ma0q01i|REFERENCES|G
+|root||root|localhost|REFERENCES|G
+|root||root||RELOAD|G
+|root||root|127.0.0.1|RELOAD|G
+|root||root|::1|RELOAD|G
+|root||root|laptop-0ma0q01i|RELOAD|G
+|root||root|localhost|RELOAD|G
+|root||root||REPLICATION CLIENT|G
+|root||root|127.0.0.1|REPLICATION CLIENT|G
+|root||root|::1|REPLICATION CLIENT|G
+|root||root|laptop-0ma0q01i|REPLICATION CLIENT|G
+|root||root|localhost|REPLICATION CLIENT|G
+|root||root||REPLICATION SLAVE|G
+|root||root|127.0.0.1|REPLICATION SLAVE|G
+|root||root|::1|REPLICATION SLAVE|G
+|root||root|laptop-0ma0q01i|REPLICATION SLAVE|G
+|root||root|localhost|REPLICATION SLAVE|G
+|root||_select_only_host_user_||SELECT|G
+|root||leght||SELECT|G
+|root||root||SELECT|G
+|root||root|127.0.0.1|SELECT|G
+|root||root|::1|SELECT|G
+|root||root|laptop-0ma0q01i|SELECT|G
+|root||root|localhost|SELECT|G
+|root||root||SHOW DATABASES|G
+|root||root|127.0.0.1|SHOW DATABASES|G
+|root||root|::1|SHOW DATABASES|G
+|root||root|laptop-0ma0q01i|SHOW DATABASES|G
+|root||root|localhost|SHOW DATABASES|G
+|root||root||SHOW VIEW|G
+|root||root|127.0.0.1|SHOW VIEW|G
+|root||root|::1|SHOW VIEW|G
+|root||root|laptop-0ma0q01i|SHOW VIEW|G
+|root||root|localhost|SHOW VIEW|G
+|root||root||SHUTDOWN|G
+|root||root|127.0.0.1|SHUTDOWN|G
+|root||root|::1|SHUTDOWN|G
+|root||root|laptop-0ma0q01i|SHUTDOWN|G
+|root||root|localhost|SHUTDOWN|G
+|root||leght||SUPER|G
+|root||root||SUPER|G
+|root||root|127.0.0.1|SUPER|G
+|root||root|::1|SUPER|G
+|root||root|laptop-0ma0q01i|SUPER|G
+|root||root|localhost|SUPER|G
+|root||root||TRIGGER|G
+|root||root|127.0.0.1|TRIGGER|G
+|root||root|::1|TRIGGER|G
+|root||root|laptop-0ma0q01i|TRIGGER|G
+|root||root|localhost|TRIGGER|G
+|root||leght||UPDATE|G
+|root||root||UPDATE|G
+|root||root|127.0.0.1|UPDATE|G
+|root||root|::1|UPDATE|G
+|root||root|laptop-0ma0q01i|UPDATE|G
+|root||root|localhost|UPDATE|G
+|root||root||grant option|G
+|root||root|127.0.0.1|grant option|G
+|root||root|::1|grant option|G
+|root||root|laptop-0ma0q01i|grant option|G
+|root||root|localhost|grant option|G
+test|schema||&apos;&apos;||ALTER|G
+test|schema||&apos;&apos;||CREATE|G
+test|schema||&apos;&apos;||CREATE ROUTINE|G
+test|schema||&apos;&apos;||CREATE TEMPORARY TABLES|G
+test|schema||&apos;&apos;||CREATE VIEW|G
+test|schema||&apos;&apos;||DELETE|G
+test|schema||&apos;&apos;||DELETE HISTORY|G
+test|schema||&apos;&apos;||DROP|G
+test|schema||&apos;&apos;||EVENT|G
+test|schema||&apos;&apos;||INDEX|G
+test|schema||&apos;&apos;||INSERT|G
+test|schema||&apos;&apos;||LOCK TABLES|G
+test|schema||&apos;&apos;||REFERENCES|G
+test|schema||&apos;&apos;||SELECT|G
+test|schema||&apos;&apos;||SHOW VIEW|G
+test|schema||&apos;&apos;||TRIGGER|G
+test|schema||&apos;&apos;||UPDATE|G
+test\\_%|schema||&apos;&apos;||ALTER|G
+test\\_%|schema||&apos;&apos;||CREATE|G
+test\\_%|schema||&apos;&apos;||CREATE ROUTINE|G
+test\\_%|schema||&apos;&apos;||CREATE TEMPORARY TABLES|G
+test\\_%|schema||&apos;&apos;||CREATE VIEW|G
+test\\_%|schema||&apos;&apos;||DELETE|G
+test\\_%|schema||&apos;&apos;||DELETE HISTORY|G
+test\\_%|schema||&apos;&apos;||DROP|G
+test\\_%|schema||&apos;&apos;||EVENT|G
+test\\_%|schema||&apos;&apos;||INDEX|G
+test\\_%|schema||&apos;&apos;||INSERT|G
+test\\_%|schema||&apos;&apos;||LOCK TABLES|G
+test\\_%|schema||&apos;&apos;||REFERENCES|G
+test\\_%|schema||&apos;&apos;||SELECT|G
+test\\_%|schema||&apos;&apos;||SHOW VIEW|G
+test\\_%|schema||&apos;&apos;||TRIGGER|G
+test\\_%|schema||&apos;&apos;||UPDATE|G
+world|schema||leght||ALTER|G
+world|schema||leght||ALTER ROUTINE|G
+world|schema||leght||CREATE|G
+world|schema||leght||CREATE ROUTINE|G
+world|schema||leght||CREATE TEMPORARY TABLES|G
+world|schema||leght||CREATE VIEW|G
+world|schema||leght||DELETE|G
+world|schema||leght||DELETE HISTORY|G
+world|schema||leght||DROP|G
+world|schema||leght||EVENT|G
+world|schema||leght||EXECUTE|G
+world|schema||leght||INDEX|G
+world|schema||leght||INSERT|G
+world|schema||leght||LOCK TABLES|G
+world|schema||leght||REFERENCES|G
+world|schema||leght||SELECT|G
+world|schema||leght||SHOW VIEW|G
+world|schema||leght||TRIGGER|G
+world|schema||leght||UPDATE|G</Grants>
+      <ServerVersion>10.3.39</ServerVersion>
+    </root>
+    <collation id="2" parent="1" name="big5_chinese_ci">
+      <Charset>big5</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="3" parent="1" name="big5_bin">
+      <Charset>big5</Charset>
+    </collation>
+    <collation id="4" parent="1" name="big5_chinese_nopad_ci">
+      <Charset>big5</Charset>
+    </collation>
+    <collation id="5" parent="1" name="big5_nopad_bin">
+      <Charset>big5</Charset>
+    </collation>
+    <collation id="6" parent="1" name="dec8_swedish_ci">
+      <Charset>dec8</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="7" parent="1" name="dec8_bin">
+      <Charset>dec8</Charset>
+    </collation>
+    <collation id="8" parent="1" name="dec8_swedish_nopad_ci">
+      <Charset>dec8</Charset>
+    </collation>
+    <collation id="9" parent="1" name="dec8_nopad_bin">
+      <Charset>dec8</Charset>
+    </collation>
+    <collation id="10" parent="1" name="cp850_general_ci">
+      <Charset>cp850</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="11" parent="1" name="cp850_bin">
+      <Charset>cp850</Charset>
+    </collation>
+    <collation id="12" parent="1" name="cp850_general_nopad_ci">
+      <Charset>cp850</Charset>
+    </collation>
+    <collation id="13" parent="1" name="cp850_nopad_bin">
+      <Charset>cp850</Charset>
+    </collation>
+    <collation id="14" parent="1" name="hp8_english_ci">
+      <Charset>hp8</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="15" parent="1" name="hp8_bin">
+      <Charset>hp8</Charset>
+    </collation>
+    <collation id="16" parent="1" name="hp8_english_nopad_ci">
+      <Charset>hp8</Charset>
+    </collation>
+    <collation id="17" parent="1" name="hp8_nopad_bin">
+      <Charset>hp8</Charset>
+    </collation>
+    <collation id="18" parent="1" name="koi8r_general_ci">
+      <Charset>koi8r</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="19" parent="1" name="koi8r_bin">
+      <Charset>koi8r</Charset>
+    </collation>
+    <collation id="20" parent="1" name="koi8r_general_nopad_ci">
+      <Charset>koi8r</Charset>
+    </collation>
+    <collation id="21" parent="1" name="koi8r_nopad_bin">
+      <Charset>koi8r</Charset>
+    </collation>
+    <collation id="22" parent="1" name="latin1_german1_ci">
+      <Charset>latin1</Charset>
+    </collation>
+    <collation id="23" parent="1" name="latin1_swedish_ci">
+      <Charset>latin1</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="24" parent="1" name="latin1_danish_ci">
+      <Charset>latin1</Charset>
+    </collation>
+    <collation id="25" parent="1" name="latin1_german2_ci">
+      <Charset>latin1</Charset>
+    </collation>
+    <collation id="26" parent="1" name="latin1_bin">
+      <Charset>latin1</Charset>
+    </collation>
+    <collation id="27" parent="1" name="latin1_general_ci">
+      <Charset>latin1</Charset>
+    </collation>
+    <collation id="28" parent="1" name="latin1_general_cs">
+      <Charset>latin1</Charset>
+    </collation>
+    <collation id="29" parent="1" name="latin1_spanish_ci">
+      <Charset>latin1</Charset>
+    </collation>
+    <collation id="30" parent="1" name="latin1_swedish_nopad_ci">
+      <Charset>latin1</Charset>
+    </collation>
+    <collation id="31" parent="1" name="latin1_nopad_bin">
+      <Charset>latin1</Charset>
+    </collation>
+    <collation id="32" parent="1" name="latin2_czech_cs">
+      <Charset>latin2</Charset>
+    </collation>
+    <collation id="33" parent="1" name="latin2_general_ci">
+      <Charset>latin2</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="34" parent="1" name="latin2_hungarian_ci">
+      <Charset>latin2</Charset>
+    </collation>
+    <collation id="35" parent="1" name="latin2_croatian_ci">
+      <Charset>latin2</Charset>
+    </collation>
+    <collation id="36" parent="1" name="latin2_bin">
+      <Charset>latin2</Charset>
+    </collation>
+    <collation id="37" parent="1" name="latin2_general_nopad_ci">
+      <Charset>latin2</Charset>
+    </collation>
+    <collation id="38" parent="1" name="latin2_nopad_bin">
+      <Charset>latin2</Charset>
+    </collation>
+    <collation id="39" parent="1" name="swe7_swedish_ci">
+      <Charset>swe7</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="40" parent="1" name="swe7_bin">
+      <Charset>swe7</Charset>
+    </collation>
+    <collation id="41" parent="1" name="swe7_swedish_nopad_ci">
+      <Charset>swe7</Charset>
+    </collation>
+    <collation id="42" parent="1" name="swe7_nopad_bin">
+      <Charset>swe7</Charset>
+    </collation>
+    <collation id="43" parent="1" name="ascii_general_ci">
+      <Charset>ascii</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="44" parent="1" name="ascii_bin">
+      <Charset>ascii</Charset>
+    </collation>
+    <collation id="45" parent="1" name="ascii_general_nopad_ci">
+      <Charset>ascii</Charset>
+    </collation>
+    <collation id="46" parent="1" name="ascii_nopad_bin">
+      <Charset>ascii</Charset>
+    </collation>
+    <collation id="47" parent="1" name="ujis_japanese_ci">
+      <Charset>ujis</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="48" parent="1" name="ujis_bin">
+      <Charset>ujis</Charset>
+    </collation>
+    <collation id="49" parent="1" name="ujis_japanese_nopad_ci">
+      <Charset>ujis</Charset>
+    </collation>
+    <collation id="50" parent="1" name="ujis_nopad_bin">
+      <Charset>ujis</Charset>
+    </collation>
+    <collation id="51" parent="1" name="sjis_japanese_ci">
+      <Charset>sjis</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="52" parent="1" name="sjis_bin">
+      <Charset>sjis</Charset>
+    </collation>
+    <collation id="53" parent="1" name="sjis_japanese_nopad_ci">
+      <Charset>sjis</Charset>
+    </collation>
+    <collation id="54" parent="1" name="sjis_nopad_bin">
+      <Charset>sjis</Charset>
+    </collation>
+    <collation id="55" parent="1" name="hebrew_general_ci">
+      <Charset>hebrew</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="56" parent="1" name="hebrew_bin">
+      <Charset>hebrew</Charset>
+    </collation>
+    <collation id="57" parent="1" name="hebrew_general_nopad_ci">
+      <Charset>hebrew</Charset>
+    </collation>
+    <collation id="58" parent="1" name="hebrew_nopad_bin">
+      <Charset>hebrew</Charset>
+    </collation>
+    <collation id="59" parent="1" name="tis620_thai_ci">
+      <Charset>tis620</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="60" parent="1" name="tis620_bin">
+      <Charset>tis620</Charset>
+    </collation>
+    <collation id="61" parent="1" name="tis620_thai_nopad_ci">
+      <Charset>tis620</Charset>
+    </collation>
+    <collation id="62" parent="1" name="tis620_nopad_bin">
+      <Charset>tis620</Charset>
+    </collation>
+    <collation id="63" parent="1" name="euckr_korean_ci">
+      <Charset>euckr</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="64" parent="1" name="euckr_bin">
+      <Charset>euckr</Charset>
+    </collation>
+    <collation id="65" parent="1" name="euckr_korean_nopad_ci">
+      <Charset>euckr</Charset>
+    </collation>
+    <collation id="66" parent="1" name="euckr_nopad_bin">
+      <Charset>euckr</Charset>
+    </collation>
+    <collation id="67" parent="1" name="koi8u_general_ci">
+      <Charset>koi8u</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="68" parent="1" name="koi8u_bin">
+      <Charset>koi8u</Charset>
+    </collation>
+    <collation id="69" parent="1" name="koi8u_general_nopad_ci">
+      <Charset>koi8u</Charset>
+    </collation>
+    <collation id="70" parent="1" name="koi8u_nopad_bin">
+      <Charset>koi8u</Charset>
+    </collation>
+    <collation id="71" parent="1" name="gb2312_chinese_ci">
+      <Charset>gb2312</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="72" parent="1" name="gb2312_bin">
+      <Charset>gb2312</Charset>
+    </collation>
+    <collation id="73" parent="1" name="gb2312_chinese_nopad_ci">
+      <Charset>gb2312</Charset>
+    </collation>
+    <collation id="74" parent="1" name="gb2312_nopad_bin">
+      <Charset>gb2312</Charset>
+    </collation>
+    <collation id="75" parent="1" name="greek_general_ci">
+      <Charset>greek</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="76" parent="1" name="greek_bin">
+      <Charset>greek</Charset>
+    </collation>
+    <collation id="77" parent="1" name="greek_general_nopad_ci">
+      <Charset>greek</Charset>
+    </collation>
+    <collation id="78" parent="1" name="greek_nopad_bin">
+      <Charset>greek</Charset>
+    </collation>
+    <collation id="79" parent="1" name="cp1250_general_ci">
+      <Charset>cp1250</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="80" parent="1" name="cp1250_czech_cs">
+      <Charset>cp1250</Charset>
+    </collation>
+    <collation id="81" parent="1" name="cp1250_croatian_ci">
+      <Charset>cp1250</Charset>
+    </collation>
+    <collation id="82" parent="1" name="cp1250_bin">
+      <Charset>cp1250</Charset>
+    </collation>
+    <collation id="83" parent="1" name="cp1250_polish_ci">
+      <Charset>cp1250</Charset>
+    </collation>
+    <collation id="84" parent="1" name="cp1250_general_nopad_ci">
+      <Charset>cp1250</Charset>
+    </collation>
+    <collation id="85" parent="1" name="cp1250_nopad_bin">
+      <Charset>cp1250</Charset>
+    </collation>
+    <collation id="86" parent="1" name="gbk_chinese_ci">
+      <Charset>gbk</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="87" parent="1" name="gbk_bin">
+      <Charset>gbk</Charset>
+    </collation>
+    <collation id="88" parent="1" name="gbk_chinese_nopad_ci">
+      <Charset>gbk</Charset>
+    </collation>
+    <collation id="89" parent="1" name="gbk_nopad_bin">
+      <Charset>gbk</Charset>
+    </collation>
+    <collation id="90" parent="1" name="latin5_turkish_ci">
+      <Charset>latin5</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="91" parent="1" name="latin5_bin">
+      <Charset>latin5</Charset>
+    </collation>
+    <collation id="92" parent="1" name="latin5_turkish_nopad_ci">
+      <Charset>latin5</Charset>
+    </collation>
+    <collation id="93" parent="1" name="latin5_nopad_bin">
+      <Charset>latin5</Charset>
+    </collation>
+    <collation id="94" parent="1" name="armscii8_general_ci">
+      <Charset>armscii8</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="95" parent="1" name="armscii8_bin">
+      <Charset>armscii8</Charset>
+    </collation>
+    <collation id="96" parent="1" name="armscii8_general_nopad_ci">
+      <Charset>armscii8</Charset>
+    </collation>
+    <collation id="97" parent="1" name="armscii8_nopad_bin">
+      <Charset>armscii8</Charset>
+    </collation>
+    <collation id="98" parent="1" name="utf8_general_ci">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="99" parent="1" name="utf8_bin">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="100" parent="1" name="utf8_unicode_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="101" parent="1" name="utf8_icelandic_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="102" parent="1" name="utf8_latvian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="103" parent="1" name="utf8_romanian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="104" parent="1" name="utf8_slovenian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="105" parent="1" name="utf8_polish_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="106" parent="1" name="utf8_estonian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="107" parent="1" name="utf8_spanish_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="108" parent="1" name="utf8_swedish_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="109" parent="1" name="utf8_turkish_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="110" parent="1" name="utf8_czech_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="111" parent="1" name="utf8_danish_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="112" parent="1" name="utf8_lithuanian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="113" parent="1" name="utf8_slovak_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="114" parent="1" name="utf8_spanish2_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="115" parent="1" name="utf8_roman_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="116" parent="1" name="utf8_persian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="117" parent="1" name="utf8_esperanto_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="118" parent="1" name="utf8_hungarian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="119" parent="1" name="utf8_sinhala_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="120" parent="1" name="utf8_german2_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="121" parent="1" name="utf8_croatian_mysql561_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="122" parent="1" name="utf8_unicode_520_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="123" parent="1" name="utf8_vietnamese_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="124" parent="1" name="utf8_general_mysql500_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="125" parent="1" name="utf8_croatian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="126" parent="1" name="utf8_myanmar_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="127" parent="1" name="utf8_thai_520_w2">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="128" parent="1" name="utf8_general_nopad_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="129" parent="1" name="utf8_nopad_bin">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="130" parent="1" name="utf8_unicode_nopad_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="131" parent="1" name="utf8_unicode_520_nopad_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="132" parent="1" name="ucs2_general_ci">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="133" parent="1" name="ucs2_bin">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="134" parent="1" name="ucs2_unicode_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="135" parent="1" name="ucs2_icelandic_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="136" parent="1" name="ucs2_latvian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="137" parent="1" name="ucs2_romanian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="138" parent="1" name="ucs2_slovenian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="139" parent="1" name="ucs2_polish_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="140" parent="1" name="ucs2_estonian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="141" parent="1" name="ucs2_spanish_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="142" parent="1" name="ucs2_swedish_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="143" parent="1" name="ucs2_turkish_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="144" parent="1" name="ucs2_czech_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="145" parent="1" name="ucs2_danish_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="146" parent="1" name="ucs2_lithuanian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="147" parent="1" name="ucs2_slovak_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="148" parent="1" name="ucs2_spanish2_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="149" parent="1" name="ucs2_roman_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="150" parent="1" name="ucs2_persian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="151" parent="1" name="ucs2_esperanto_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="152" parent="1" name="ucs2_hungarian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="153" parent="1" name="ucs2_sinhala_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="154" parent="1" name="ucs2_german2_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="155" parent="1" name="ucs2_croatian_mysql561_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="156" parent="1" name="ucs2_unicode_520_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="157" parent="1" name="ucs2_vietnamese_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="158" parent="1" name="ucs2_general_mysql500_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="159" parent="1" name="ucs2_croatian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="160" parent="1" name="ucs2_myanmar_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="161" parent="1" name="ucs2_thai_520_w2">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="162" parent="1" name="ucs2_general_nopad_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="163" parent="1" name="ucs2_nopad_bin">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="164" parent="1" name="ucs2_unicode_nopad_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="165" parent="1" name="ucs2_unicode_520_nopad_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="166" parent="1" name="cp866_general_ci">
+      <Charset>cp866</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="167" parent="1" name="cp866_bin">
+      <Charset>cp866</Charset>
+    </collation>
+    <collation id="168" parent="1" name="cp866_general_nopad_ci">
+      <Charset>cp866</Charset>
+    </collation>
+    <collation id="169" parent="1" name="cp866_nopad_bin">
+      <Charset>cp866</Charset>
+    </collation>
+    <collation id="170" parent="1" name="keybcs2_general_ci">
+      <Charset>keybcs2</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="171" parent="1" name="keybcs2_bin">
+      <Charset>keybcs2</Charset>
+    </collation>
+    <collation id="172" parent="1" name="keybcs2_general_nopad_ci">
+      <Charset>keybcs2</Charset>
+    </collation>
+    <collation id="173" parent="1" name="keybcs2_nopad_bin">
+      <Charset>keybcs2</Charset>
+    </collation>
+    <collation id="174" parent="1" name="macce_general_ci">
+      <Charset>macce</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="175" parent="1" name="macce_bin">
+      <Charset>macce</Charset>
+    </collation>
+    <collation id="176" parent="1" name="macce_general_nopad_ci">
+      <Charset>macce</Charset>
+    </collation>
+    <collation id="177" parent="1" name="macce_nopad_bin">
+      <Charset>macce</Charset>
+    </collation>
+    <collation id="178" parent="1" name="macroman_general_ci">
+      <Charset>macroman</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="179" parent="1" name="macroman_bin">
+      <Charset>macroman</Charset>
+    </collation>
+    <collation id="180" parent="1" name="macroman_general_nopad_ci">
+      <Charset>macroman</Charset>
+    </collation>
+    <collation id="181" parent="1" name="macroman_nopad_bin">
+      <Charset>macroman</Charset>
+    </collation>
+    <collation id="182" parent="1" name="cp852_general_ci">
+      <Charset>cp852</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="183" parent="1" name="cp852_bin">
+      <Charset>cp852</Charset>
+    </collation>
+    <collation id="184" parent="1" name="cp852_general_nopad_ci">
+      <Charset>cp852</Charset>
+    </collation>
+    <collation id="185" parent="1" name="cp852_nopad_bin">
+      <Charset>cp852</Charset>
+    </collation>
+    <collation id="186" parent="1" name="latin7_estonian_cs">
+      <Charset>latin7</Charset>
+    </collation>
+    <collation id="187" parent="1" name="latin7_general_ci">
+      <Charset>latin7</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="188" parent="1" name="latin7_general_cs">
+      <Charset>latin7</Charset>
+    </collation>
+    <collation id="189" parent="1" name="latin7_bin">
+      <Charset>latin7</Charset>
+    </collation>
+    <collation id="190" parent="1" name="latin7_general_nopad_ci">
+      <Charset>latin7</Charset>
+    </collation>
+    <collation id="191" parent="1" name="latin7_nopad_bin">
+      <Charset>latin7</Charset>
+    </collation>
+    <collation id="192" parent="1" name="utf8mb4_general_ci">
+      <Charset>utf8mb4</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="193" parent="1" name="utf8mb4_bin">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="194" parent="1" name="utf8mb4_unicode_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="195" parent="1" name="utf8mb4_icelandic_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="196" parent="1" name="utf8mb4_latvian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="197" parent="1" name="utf8mb4_romanian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="198" parent="1" name="utf8mb4_slovenian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="199" parent="1" name="utf8mb4_polish_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="200" parent="1" name="utf8mb4_estonian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="201" parent="1" name="utf8mb4_spanish_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="202" parent="1" name="utf8mb4_swedish_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="203" parent="1" name="utf8mb4_turkish_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="204" parent="1" name="utf8mb4_czech_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="205" parent="1" name="utf8mb4_danish_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="206" parent="1" name="utf8mb4_lithuanian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="207" parent="1" name="utf8mb4_slovak_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="208" parent="1" name="utf8mb4_spanish2_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="209" parent="1" name="utf8mb4_roman_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="210" parent="1" name="utf8mb4_persian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="211" parent="1" name="utf8mb4_esperanto_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="212" parent="1" name="utf8mb4_hungarian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="213" parent="1" name="utf8mb4_sinhala_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="214" parent="1" name="utf8mb4_german2_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="215" parent="1" name="utf8mb4_croatian_mysql561_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="216" parent="1" name="utf8mb4_unicode_520_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="217" parent="1" name="utf8mb4_vietnamese_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="218" parent="1" name="utf8mb4_croatian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="219" parent="1" name="utf8mb4_myanmar_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="220" parent="1" name="utf8mb4_thai_520_w2">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="221" parent="1" name="utf8mb4_general_nopad_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="222" parent="1" name="utf8mb4_nopad_bin">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="223" parent="1" name="utf8mb4_unicode_nopad_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="224" parent="1" name="utf8mb4_unicode_520_nopad_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="225" parent="1" name="cp1251_bulgarian_ci">
+      <Charset>cp1251</Charset>
+    </collation>
+    <collation id="226" parent="1" name="cp1251_ukrainian_ci">
+      <Charset>cp1251</Charset>
+    </collation>
+    <collation id="227" parent="1" name="cp1251_bin">
+      <Charset>cp1251</Charset>
+    </collation>
+    <collation id="228" parent="1" name="cp1251_general_ci">
+      <Charset>cp1251</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="229" parent="1" name="cp1251_general_cs">
+      <Charset>cp1251</Charset>
+    </collation>
+    <collation id="230" parent="1" name="cp1251_nopad_bin">
+      <Charset>cp1251</Charset>
+    </collation>
+    <collation id="231" parent="1" name="cp1251_general_nopad_ci">
+      <Charset>cp1251</Charset>
+    </collation>
+    <collation id="232" parent="1" name="utf16_general_ci">
+      <Charset>utf16</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="233" parent="1" name="utf16_bin">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="234" parent="1" name="utf16_unicode_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="235" parent="1" name="utf16_icelandic_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="236" parent="1" name="utf16_latvian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="237" parent="1" name="utf16_romanian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="238" parent="1" name="utf16_slovenian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="239" parent="1" name="utf16_polish_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="240" parent="1" name="utf16_estonian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="241" parent="1" name="utf16_spanish_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="242" parent="1" name="utf16_swedish_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="243" parent="1" name="utf16_turkish_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="244" parent="1" name="utf16_czech_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="245" parent="1" name="utf16_danish_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="246" parent="1" name="utf16_lithuanian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="247" parent="1" name="utf16_slovak_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="248" parent="1" name="utf16_spanish2_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="249" parent="1" name="utf16_roman_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="250" parent="1" name="utf16_persian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="251" parent="1" name="utf16_esperanto_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="252" parent="1" name="utf16_hungarian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="253" parent="1" name="utf16_sinhala_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="254" parent="1" name="utf16_german2_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="255" parent="1" name="utf16_croatian_mysql561_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="256" parent="1" name="utf16_unicode_520_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="257" parent="1" name="utf16_vietnamese_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="258" parent="1" name="utf16_croatian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="259" parent="1" name="utf16_myanmar_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="260" parent="1" name="utf16_thai_520_w2">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="261" parent="1" name="utf16_general_nopad_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="262" parent="1" name="utf16_nopad_bin">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="263" parent="1" name="utf16_unicode_nopad_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="264" parent="1" name="utf16_unicode_520_nopad_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="265" parent="1" name="utf16le_general_ci">
+      <Charset>utf16le</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="266" parent="1" name="utf16le_bin">
+      <Charset>utf16le</Charset>
+    </collation>
+    <collation id="267" parent="1" name="utf16le_general_nopad_ci">
+      <Charset>utf16le</Charset>
+    </collation>
+    <collation id="268" parent="1" name="utf16le_nopad_bin">
+      <Charset>utf16le</Charset>
+    </collation>
+    <collation id="269" parent="1" name="cp1256_general_ci">
+      <Charset>cp1256</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="270" parent="1" name="cp1256_bin">
+      <Charset>cp1256</Charset>
+    </collation>
+    <collation id="271" parent="1" name="cp1256_general_nopad_ci">
+      <Charset>cp1256</Charset>
+    </collation>
+    <collation id="272" parent="1" name="cp1256_nopad_bin">
+      <Charset>cp1256</Charset>
+    </collation>
+    <collation id="273" parent="1" name="cp1257_lithuanian_ci">
+      <Charset>cp1257</Charset>
+    </collation>
+    <collation id="274" parent="1" name="cp1257_bin">
+      <Charset>cp1257</Charset>
+    </collation>
+    <collation id="275" parent="1" name="cp1257_general_ci">
+      <Charset>cp1257</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="276" parent="1" name="cp1257_nopad_bin">
+      <Charset>cp1257</Charset>
+    </collation>
+    <collation id="277" parent="1" name="cp1257_general_nopad_ci">
+      <Charset>cp1257</Charset>
+    </collation>
+    <collation id="278" parent="1" name="utf32_general_ci">
+      <Charset>utf32</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="279" parent="1" name="utf32_bin">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="280" parent="1" name="utf32_unicode_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="281" parent="1" name="utf32_icelandic_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="282" parent="1" name="utf32_latvian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="283" parent="1" name="utf32_romanian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="284" parent="1" name="utf32_slovenian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="285" parent="1" name="utf32_polish_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="286" parent="1" name="utf32_estonian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="287" parent="1" name="utf32_spanish_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="288" parent="1" name="utf32_swedish_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="289" parent="1" name="utf32_turkish_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="290" parent="1" name="utf32_czech_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="291" parent="1" name="utf32_danish_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="292" parent="1" name="utf32_lithuanian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="293" parent="1" name="utf32_slovak_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="294" parent="1" name="utf32_spanish2_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="295" parent="1" name="utf32_roman_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="296" parent="1" name="utf32_persian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="297" parent="1" name="utf32_esperanto_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="298" parent="1" name="utf32_hungarian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="299" parent="1" name="utf32_sinhala_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="300" parent="1" name="utf32_german2_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="301" parent="1" name="utf32_croatian_mysql561_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="302" parent="1" name="utf32_unicode_520_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="303" parent="1" name="utf32_vietnamese_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="304" parent="1" name="utf32_croatian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="305" parent="1" name="utf32_myanmar_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="306" parent="1" name="utf32_thai_520_w2">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="307" parent="1" name="utf32_general_nopad_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="308" parent="1" name="utf32_nopad_bin">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="309" parent="1" name="utf32_unicode_nopad_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="310" parent="1" name="utf32_unicode_520_nopad_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="311" parent="1" name="binary">
+      <Charset>binary</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="312" parent="1" name="geostd8_general_ci">
+      <Charset>geostd8</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="313" parent="1" name="geostd8_bin">
+      <Charset>geostd8</Charset>
+    </collation>
+    <collation id="314" parent="1" name="geostd8_general_nopad_ci">
+      <Charset>geostd8</Charset>
+    </collation>
+    <collation id="315" parent="1" name="geostd8_nopad_bin">
+      <Charset>geostd8</Charset>
+    </collation>
+    <collation id="316" parent="1" name="cp932_japanese_ci">
+      <Charset>cp932</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="317" parent="1" name="cp932_bin">
+      <Charset>cp932</Charset>
+    </collation>
+    <collation id="318" parent="1" name="cp932_japanese_nopad_ci">
+      <Charset>cp932</Charset>
+    </collation>
+    <collation id="319" parent="1" name="cp932_nopad_bin">
+      <Charset>cp932</Charset>
+    </collation>
+    <collation id="320" parent="1" name="eucjpms_japanese_ci">
+      <Charset>eucjpms</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="321" parent="1" name="eucjpms_bin">
+      <Charset>eucjpms</Charset>
+    </collation>
+    <collation id="322" parent="1" name="eucjpms_japanese_nopad_ci">
+      <Charset>eucjpms</Charset>
+    </collation>
+    <collation id="323" parent="1" name="eucjpms_nopad_bin">
+      <Charset>eucjpms</Charset>
+    </collation>
+    <schema id="324" parent="1" name="information_schema">
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <schema id="325" parent="1" name="aqworlds">
+      <Current>1</Current>
+      <IntrospectionTimestamp>2025-07-17.21:21:12</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2025-07-17.05:21:12</LocalIntrospectionTimestamp>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </schema>
+    <schema id="326" parent="1" name="atlasia">
+      <CollationName>latin1_swedish_ci</CollationName>
+    </schema>
+    <schema id="327" parent="1" name="game">
+      <CollationName>latin1_swedish_ci</CollationName>
+    </schema>
+    <schema id="328" parent="1" name="game_website">
+      <CollationName>latin1_swedish_ci</CollationName>
+    </schema>
+    <schema id="329" parent="1" name="hms">
+      <CollationName>latin1_swedish_ci</CollationName>
+    </schema>
+    <schema id="330" parent="1" name="hms_db">
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <schema id="331" parent="1" name="leght">
+      <CollationName>latin1_swedish_ci</CollationName>
+    </schema>
+    <schema id="332" parent="1" name="light">
+      <CollationName>latin1_swedish_ci</CollationName>
+    </schema>
+    <schema id="333" parent="1" name="mydb">
+      <CollationName>utf16_general_ci</CollationName>
+    </schema>
+    <schema id="334" parent="1" name="mysql">
+      <CollationName>latin1_swedish_ci</CollationName>
+    </schema>
+    <schema id="335" parent="1" name="performance_schema">
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <schema id="336" parent="1" name="school">
+      <CollationName>utf16_general_ci</CollationName>
+    </schema>
+    <schema id="337" parent="1" name="sms">
+      <CollationName>latin1_swedish_ci</CollationName>
+    </schema>
+    <schema id="338" parent="1" name="store">
+      <CollationName>utf16_general_ci</CollationName>
+    </schema>
+    <schema id="339" parent="1" name="test">
+      <CollationName>latin1_swedish_ci</CollationName>
+    </schema>
+    <schema id="340" parent="1" name="test_123">
+      <CollationName>utf16_general_ci</CollationName>
+    </schema>
+    <schema id="341" parent="1" name="unibook">
+      <CollationName>latin1_swedish_ci</CollationName>
+    </schema>
+    <schema id="342" parent="1" name="v1">
+      <CollationName>latin1_swedish_ci</CollationName>
+    </schema>
+    <schema id="343" parent="1" name="web">
+      <CollationName>utf16_general_ci</CollationName>
+    </schema>
+    <schema id="344" parent="1" name="world">
+      <CollationName>latin1_swedish_ci</CollationName>
+    </schema>
+    <user id="345" parent="1" name="root">
+      <Host>localhost</Host>
+    </user>
+    <user id="346" parent="1" name="root">
+      <Host>laptop-0ma0q01i</Host>
+    </user>
+    <user id="347" parent="1" name="root">
+      <Host>127.0.0.1</Host>
+    </user>
+    <user id="348" parent="1" name="root">
+      <Host>::1</Host>
+    </user>
+    <user id="349" parent="1" name="root"/>
+    <user id="350" parent="1" name="leght"/>
+    <user id="351" parent="1" name="_select_only_host_user_"/>
+    <user id="352" parent="1" name="_insert_only_host_user_"/>
+    <scheduled-event id="353" parent="325" name="[Quest] Daily Quest Reset">
+      <Definer>root@localhost</Definer>
+      <Ends>&apos;2025-10-10 19:34:15&apos;</Ends>
+      <Interval>&apos;1&apos; DAY</Interval>
+      <SourceTextLength>96</SourceTextLength>
+      <Starts>&apos;2020-08-26 00:00:00&apos;</Starts>
+      <Status>enabled</Status>
+    </scheduled-event>
+    <scheduled-event id="354" parent="325" name="[Quest] Monthly Reset">
+      <Definer>root@localhost</Definer>
+      <Ends>&apos;2025-10-10 19:34:15&apos;</Ends>
+      <Interval>&apos;1&apos; MONTH</Interval>
+      <SourceTextLength>35</SourceTextLength>
+      <Starts>&apos;2020-10-10 19:33:00&apos;</Starts>
+      <Status>enabled</Status>
+    </scheduled-event>
+    <table id="355" parent="325" name="achievements">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="356" parent="325" name="auras">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="357" parent="325" name="auras_effects">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="358" parent="325" name="classes">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="359" parent="325" name="enhancements">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="360" parent="325" name="enhancements_patterns">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="361" parent="325" name="factions">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="362" parent="325" name="global_drops">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="363" parent="325" name="guilds">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="364" parent="325" name="hairs">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="365" parent="325" name="hairs_shops">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="366" parent="325" name="hairs_shops_items">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="367" parent="325" name="items">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="368" parent="325" name="items_requirements">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="369" parent="325" name="items_skills">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="370" parent="325" name="maps">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="371" parent="325" name="maps_items">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="372" parent="325" name="maps_monsters">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="373" parent="325" name="monsters">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="374" parent="325" name="monsters_bosses">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="375" parent="325" name="monsters_drops">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="376" parent="325" name="monsters_skills">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="377" parent="325" name="quests">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="378" parent="325" name="quests_required_items">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="379" parent="325" name="quests_requirements">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="380" parent="325" name="quests_rewards">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="381" parent="325" name="redeems">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="382" parent="325" name="servers">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="383" parent="325" name="settings_filters">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="384" parent="325" name="settings_login">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="385" parent="325" name="settings_messages">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="386" parent="325" name="settings_rates">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="387" parent="325" name="shops">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="388" parent="325" name="shops_items">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="389" parent="325" name="shops_seasonal">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="390" parent="325" name="skills">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="391" parent="325" name="skills_assign">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="392" parent="325" name="skills_auras">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="393" parent="325" name="stores">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="394" parent="325" name="stores_orders">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="395" parent="325" name="titles">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="396" parent="325" name="users">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="397" parent="325" name="users_achievements">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="398" parent="325" name="users_factions">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="399" parent="325" name="users_friends">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="400" parent="325" name="users_guilds">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="401" parent="325" name="users_houses">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="402" parent="325" name="users_items">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="403" parent="325" name="users_logs">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="404" parent="325" name="users_markets">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="405" parent="325" name="users_markets_logs">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="406" parent="325" name="users_outfits">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="407" parent="325" name="users_redeems">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="408" parent="325" name="users_reports">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="409" parent="325" name="users_titles">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="410" parent="325" name="users_trades">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="411" parent="325" name="users_trades_items">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="412" parent="325" name="wars">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="413" parent="325" name="web_posts">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="414" parent="325" name="wheels">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <column id="415" parent="355" name="id">
+      <AutoIncrement>2</AutoIncrement>
+      <DasType>int(14) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="416" parent="355" name="Name">
+      <DasType>varchar(55)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="417" parent="355" name="File">
+      <DasType>varchar(255)|0s</DasType>
+      <DefaultExpression>&apos;default.swf&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="418" parent="355" name="Image">
+      <DasType>varchar(255)|0s</DasType>
+      <DefaultExpression>&apos;Achievement.png&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="419" parent="355" name="Linkage">
+      <DasType>varchar(60)|0s</DasType>
+      <DefaultExpression>&apos;Achievement&apos;</DefaultExpression>
+      <Position>5</Position>
+    </column>
+    <column id="420" parent="355" name="Description">
+      <DasType>text|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <index id="421" parent="355" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="422" parent="355" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="423" parent="356" name="id">
+      <AutoIncrement>12</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="424" parent="356" name="Name">
+      <DasType>varchar(32)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="425" parent="356" name="Duration">
+      <DasType>smallint(3)|0s</DasType>
+      <DefaultExpression>6</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="426" parent="356" name="Category">
+      <DasType>varchar(8)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="427" parent="356" name="Chance">
+      <DasType>decimal(7,2 digit)|0s</DasType>
+      <DefaultExpression>1.00</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="428" parent="356" name="DamageIncrease">
+      <DasType>decimal(7,2 digit)|0s</DasType>
+      <DefaultExpression>0.00</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="429" parent="356" name="DamageTakenDecrease">
+      <DasType>decimal(7,2 digit)|0s</DasType>
+      <DefaultExpression>0.00</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="430" parent="356" name="MaxStack">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>999</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <index id="431" parent="356" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="432" parent="356" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="433" parent="357" name="id">
+      <AutoIncrement>12</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="434" parent="357" name="AuraID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="435" parent="357" name="Stat">
+      <DasType>char(3)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="436" parent="357" name="Value">
+      <DasType>decimal(7,2 digit)|0s</DasType>
+      <DefaultExpression>0.00</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="437" parent="357" name="Type">
+      <DasType>char(1)|0s</DasType>
+      <DefaultExpression>&apos;+&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <foreign-key id="438" parent="357" name="FK_auras_effects_auras">
+      <ColNames>AuraID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>auras</RefTableName>
+    </foreign-key>
+    <index id="439" parent="357" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="440" parent="357" name="FK_auras_effects_auras">
+      <ColNames>AuraID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="441" parent="357" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="442" parent="358" name="id">
+      <AutoIncrement>3</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="443" parent="358" name="ItemID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="444" parent="358" name="Category">
+      <DasType>char(2)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="445" parent="358" name="Description">
+      <DasType>text|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="446" parent="358" name="ManaRegenerationMethods">
+      <DasType>text|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="447" parent="358" name="StatsDescription">
+      <DasType>text|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <foreign-key id="448" parent="358" name="FK_classes_items">
+      <ColNames>ItemID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>items</RefTableName>
+    </foreign-key>
+    <index id="449" parent="358" name="PRIMARY">
+      <ColNames>id
+ItemID</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="450" parent="358" name="FK_classes_items">
+      <ColNames>ItemID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="451" parent="358" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="452" parent="359" name="id">
+      <AutoIncrement>5</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="453" parent="359" name="Name">
+      <DasType>varchar(32)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="454" parent="359" name="PatternID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="455" parent="359" name="Rarity">
+      <DasType>tinyint(3) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="456" parent="359" name="DPS">
+      <DasType>smallint(4) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="457" parent="359" name="Level">
+      <DasType>tinyint(3) unsigned|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <foreign-key id="458" parent="359" name="FK_enhancements_enhancements_patterns">
+      <ColNames>PatternID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>enhancements_patterns</RefTableName>
+    </foreign-key>
+    <index id="459" parent="359" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="460" parent="359" name="fk_enhancements_patternid">
+      <ColNames>PatternID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="461" parent="359" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="462" parent="360" name="id">
+      <AutoIncrement>5</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="463" parent="360" name="Name">
+      <DasType>varchar(32)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="464" parent="360" name="Desc">
+      <DasType>varchar(4)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="465" parent="360" name="Wisdom">
+      <DasType>tinyint(2) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="466" parent="360" name="Strength">
+      <DasType>tinyint(2) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="467" parent="360" name="Luck">
+      <DasType>tinyint(2) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="468" parent="360" name="Dexterity">
+      <DasType>tinyint(2) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="469" parent="360" name="Endurance">
+      <DasType>tinyint(2) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="470" parent="360" name="Intelligence">
+      <DasType>tinyint(2) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+    </column>
+    <index id="471" parent="360" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="472" parent="360" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="473" parent="361" name="id">
+      <AutoIncrement>5</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="474" parent="361" name="Name">
+      <DasType>varchar(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <index id="475" parent="361" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="476" parent="361" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="477" parent="362" name="id">
+      <AutoIncrement>3</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="478" parent="362" name="ItemID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="479" parent="362" name="Chance">
+      <DasType>decimal(7,2 digit) unsigned|0s</DasType>
+      <DefaultExpression>1.00</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="480" parent="362" name="Quantity">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <foreign-key id="481" parent="362" name="FK_global_drops_items">
+      <ColNames>ItemID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>items</RefTableName>
+    </foreign-key>
+    <index id="482" parent="362" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="483" parent="362" name="FK_global_drops_items">
+      <ColNames>ItemID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="484" parent="362" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="485" parent="363" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="486" parent="363" name="Name">
+      <DasType>varchar(64)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="487" parent="363" name="Color">
+      <DasType>varchar(64)|0s</DasType>
+      <DefaultExpression>&apos;0xFFFFFF&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="488" parent="363" name="MessageOfTheDay">
+      <DasType>varchar(512)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="489" parent="363" name="MaxMembers">
+      <DasType>tinyint(3) unsigned|0s</DasType>
+      <DefaultExpression>15</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="490" parent="363" name="Wins">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="491" parent="363" name="Loses">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="492" parent="363" name="TotalKills">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="493" parent="363" name="Level">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+    </column>
+    <column id="494" parent="363" name="Exp">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+    </column>
+    <index id="495" parent="363" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="496" parent="363" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="497" parent="364" name="id">
+      <AutoIncrement>958</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="498" parent="364" name="Gender">
+      <DasType>char(1)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="499" parent="364" name="Name">
+      <DasType>varchar(16)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="500" parent="364" name="File">
+      <DasType>varchar(64)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <index id="501" parent="364" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="502" parent="364" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="503" parent="365" name="id">
+      <AutoIncrement>2</AutoIncrement>
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="504" parent="365" name="Name">
+      <DasType>varchar(50)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <index id="505" parent="365" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="506" parent="365" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="507" parent="366" name="id">
+      <AutoIncrement>3</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="508" parent="366" name="Gender">
+      <DasType>enum(&apos;M&apos;, &apos;F&apos;)|0e</DasType>
+      <DefaultExpression>&apos;M&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="509" parent="366" name="ShopID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="510" parent="366" name="HairID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <index id="511" parent="366" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="512" parent="366" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="513" parent="367" name="id">
+      <AutoIncrement>18</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="514" parent="367" name="Name">
+      <DasType>varchar(60)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="515" parent="367" name="Description">
+      <DasType>text|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="516" parent="367" name="Type">
+      <DasType>varchar(16)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="517" parent="367" name="Element">
+      <DasType>varchar(16)|0s</DasType>
+      <DefaultExpression>&apos;None&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="518" parent="367" name="File">
+      <DasType>varchar(120)|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <column id="519" parent="367" name="Link">
+      <DasType>varchar(64)|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <column id="520" parent="367" name="Icon">
+      <DasType>varchar(16)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="521" parent="367" name="Equipment">
+      <DasType>varchar(10)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+    </column>
+    <column id="522" parent="367" name="Level">
+      <DasType>tinyint(3) unsigned|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+    </column>
+    <column id="523" parent="367" name="DPS">
+      <DasType>smallint(6) unsigned|0s</DasType>
+      <DefaultExpression>100</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+    </column>
+    <column id="524" parent="367" name="Range">
+      <DasType>smallint(6) unsigned|0s</DasType>
+      <DefaultExpression>50</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>12</Position>
+    </column>
+    <column id="525" parent="367" name="Rarity">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>13</Position>
+    </column>
+    <column id="526" parent="367" name="Quantity">
+      <DasType>smallint(4) unsigned|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>14</Position>
+    </column>
+    <column id="527" parent="367" name="Stack">
+      <DasType>smallint(4) unsigned|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>15</Position>
+    </column>
+    <column id="528" parent="367" name="Cost">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>16</Position>
+    </column>
+    <column id="529" parent="367" name="Coins">
+      <DasType>tinyint(1) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>17</Position>
+    </column>
+    <column id="530" parent="367" name="Sell">
+      <DasType>tinyint(1) unsigned|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>18</Position>
+    </column>
+    <column id="531" parent="367" name="Temporary">
+      <DasType>tinyint(1) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>19</Position>
+    </column>
+    <column id="532" parent="367" name="Upgrade">
+      <DasType>tinyint(1) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>20</Position>
+    </column>
+    <column id="533" parent="367" name="Staff">
+      <DasType>tinyint(1) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>21</Position>
+    </column>
+    <column id="534" parent="367" name="EnhID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>22</Position>
+    </column>
+    <column id="535" parent="367" name="FactionID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <Position>23</Position>
+    </column>
+    <column id="536" parent="367" name="ReqReputation">
+      <DasType>mediumint(6) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>24</Position>
+    </column>
+    <column id="537" parent="367" name="ReqClassID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>25</Position>
+    </column>
+    <column id="538" parent="367" name="ReqClassPoints">
+      <DasType>mediumint(6) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>26</Position>
+    </column>
+    <column id="539" parent="367" name="QuestStringIndex">
+      <DasType>tinyint(3)|0s</DasType>
+      <DefaultExpression>-1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>27</Position>
+    </column>
+    <column id="540" parent="367" name="QuestStringValue">
+      <DasType>tinyint(3)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>28</Position>
+    </column>
+    <column id="541" parent="367" name="ReqQuests">
+      <DasType>varchar(32)|0s</DasType>
+      <Position>29</Position>
+    </column>
+    <column id="542" parent="367" name="Trade">
+      <DasType>tinyint(1)|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <Position>30</Position>
+    </column>
+    <column id="543" parent="367" name="Market">
+      <DasType>tinyint(1)|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <Position>31</Position>
+    </column>
+    <column id="544" parent="367" name="Meta">
+      <DasType>varchar(32)|0s</DasType>
+      <Position>32</Position>
+    </column>
+    <foreign-key id="545" parent="367" name="FK_items_enhancements">
+      <ColNames>EnhID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>enhancements</RefTableName>
+    </foreign-key>
+    <index id="546" parent="367" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="547" parent="367" name="FK_items_items_rarities">
+      <ColNames>Rarity</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="548" parent="367" name="fk_items_enhid">
+      <ColNames>EnhID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="549" parent="367" name="fk_items_factionid">
+      <ColNames>FactionID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="550" parent="367" name="fk_items_reqclassid">
+      <ColNames>ReqClassID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="551" parent="367" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="552" parent="368" name="id">
+      <AutoIncrement>5</AutoIncrement>
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="553" parent="368" name="ItemID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="554" parent="368" name="ReqItemID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="555" parent="368" name="Quantity">
+      <DasType>smallint(6) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <foreign-key id="556" parent="368" name="FK_items_requirements_items">
+      <ColNames>ItemID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>items</RefTableName>
+    </foreign-key>
+    <foreign-key id="557" parent="368" name="FK_items_requirements_items_2">
+      <ColNames>ReqItemID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>items</RefTableName>
+    </foreign-key>
+    <index id="558" parent="368" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="559" parent="368" name="FK_items_requirements_items">
+      <ColNames>ItemID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="560" parent="368" name="FK_items_requirements_items_2">
+      <ColNames>ReqItemID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="561" parent="368" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="562" parent="369" name="id">
+      <AutoIncrement>5</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="563" parent="369" name="ItemID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="564" parent="369" name="SkillID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <foreign-key id="565" parent="369" name="FKpp1cdddrcqxq1qxx9rjnvpp3r">
+      <ColNames>ItemID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>items</RefTableName>
+    </foreign-key>
+    <foreign-key id="566" parent="369" name="FKqyt8g25xcsjrbt21de7clmkf8">
+      <ColNames>SkillID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>skills</RefTableName>
+    </foreign-key>
+    <index id="567" parent="369" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="568" parent="369" name="Index 3">
+      <ColNames>ItemID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="569" parent="369" name="FK_items_skills_skills">
+      <ColNames>SkillID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="570" parent="369" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="571" parent="370" name="id">
+      <AutoIncrement>6</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="572" parent="370" name="Name">
+      <DasType>varchar(32)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="573" parent="370" name="File">
+      <DasType>varchar(128)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="574" parent="370" name="MaxPlayers">
+      <DasType>tinyint(3) unsigned|0s</DasType>
+      <DefaultExpression>6</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="575" parent="370" name="ReqLevel">
+      <DasType>tinyint(3) unsigned|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="576" parent="370" name="ReqParty">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="577" parent="370" name="Upgrade">
+      <DasType>tinyint(1) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="578" parent="370" name="Staff">
+      <DasType>tinyint(1) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="579" parent="370" name="PvP">
+      <DasType>tinyint(1) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+    </column>
+    <column id="580" parent="370" name="WorldBoss">
+      <DasType>tinyint(1) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+    </column>
+    <index id="581" parent="370" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="582" parent="370" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="583" parent="371" name="id">
+      <AutoIncrement>4</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="584" parent="371" name="MapID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="585" parent="371" name="ItemID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <foreign-key id="586" parent="371" name="FKg9692euy8ff48y6mmxntemklc">
+      <ColNames>MapID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>maps</RefTableName>
+    </foreign-key>
+    <foreign-key id="587" parent="371" name="FKqm8afl1ljard4s2nib32g69ts">
+      <ColNames>ItemID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>items</RefTableName>
+    </foreign-key>
+    <index id="588" parent="371" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="589" parent="371" name="Index 3">
+      <ColNames>MapID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="590" parent="371" name="fk_mapitem_itemid">
+      <ColNames>ItemID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="591" parent="371" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="592" parent="372" name="id">
+      <AutoIncrement>9</AutoIncrement>
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="593" parent="372" name="MapID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="594" parent="372" name="MonsterID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="595" parent="372" name="MonMapID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="596" parent="372" name="Frame">
+      <DasType>varchar(16)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="597" parent="372" name="Aggresive">
+      <DasType>tinyint(1)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <foreign-key id="598" parent="372" name="FKois5ak4sxfhdlx37p7xeh83sg">
+      <ColNames>MapID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>maps</RefTableName>
+    </foreign-key>
+    <foreign-key id="599" parent="372" name="FKj4bx7ums3hogq184e3m3pnfb8">
+      <ColNames>MonsterID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>monsters</RefTableName>
+    </foreign-key>
+    <index id="600" parent="372" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="601" parent="372" name="FK_maps_monsters_maps">
+      <ColNames>MapID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="602" parent="372" name="FK_maps_monsters_monsters">
+      <ColNames>MonsterID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="603" parent="372" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="604" parent="373" name="id">
+      <AutoIncrement>4</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="605" parent="373" name="Name">
+      <DasType>varchar(30)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="606" parent="373" name="File">
+      <DasType>varchar(128)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="607" parent="373" name="Linkage">
+      <DasType>varchar(32)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="608" parent="373" name="Level">
+      <DasType>tinyint(3) unsigned|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="609" parent="373" name="Health">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>1000</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="610" parent="373" name="Mana">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>100</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="611" parent="373" name="Gold">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="612" parent="373" name="Coin">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+    </column>
+    <column id="613" parent="373" name="Experience">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+    </column>
+    <column id="614" parent="373" name="ClassPoint">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+    </column>
+    <column id="615" parent="373" name="Reputation">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>12</Position>
+    </column>
+    <column id="616" parent="373" name="DamageReduction">
+      <DasType>decimal(7,2 digit)|0s</DasType>
+      <DefaultExpression>0.00</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>13</Position>
+    </column>
+    <column id="617" parent="373" name="DPS">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>100</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>14</Position>
+    </column>
+    <column id="618" parent="373" name="Respawn">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>6</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>15</Position>
+    </column>
+    <column id="619" parent="373" name="Speed">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>1500</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>16</Position>
+    </column>
+    <column id="620" parent="373" name="Immune">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>17</Position>
+    </column>
+    <column id="621" parent="373" name="WorldBoss">
+      <DasType>tinyint(1)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>18</Position>
+    </column>
+    <index id="622" parent="373" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="623" parent="373" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="624" parent="374" name="id">
+      <AutoIncrement>3</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="625" parent="374" name="MonsterID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="626" parent="374" name="MapID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="627" parent="374" name="SpawnInterval">
+      <DasType>bigint(30) unsigned|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="628" parent="374" name="TimeLimit">
+      <DasType>int(11) unsigned|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="629" parent="374" name="Description">
+      <DasType>text|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <column id="630" parent="374" name="Image">
+      <DasType>text|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <column id="631" parent="374" name="Kills">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>8</Position>
+    </column>
+    <column id="632" parent="374" name="Deaths">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>9</Position>
+    </column>
+    <column id="633" parent="374" name="DeathTime">
+      <DasType>timestamp|0s</DasType>
+      <DefaultExpression>current_timestamp()</DefaultExpression>
+      <Position>10</Position>
+    </column>
+    <column id="634" parent="374" name="SpawnTime">
+      <DasType>timestamp|0s</DasType>
+      <DefaultExpression>current_timestamp()</DefaultExpression>
+      <Position>11</Position>
+    </column>
+    <column id="635" parent="374" name="LastDefeat">
+      <DasType>varchar(60)|0s</DasType>
+      <Position>12</Position>
+    </column>
+    <index id="636" parent="374" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="637" parent="374" name="FK__monsters">
+      <ColNames>MonsterID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="638" parent="374" name="FK__maps">
+      <ColNames>MapID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="639" parent="374" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="640" parent="375" name="id">
+      <AutoIncrement>4</AutoIncrement>
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="641" parent="375" name="MonsterID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="642" parent="375" name="ItemID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="643" parent="375" name="Chance">
+      <DasType>decimal(7,2 digit) unsigned|0s</DasType>
+      <DefaultExpression>1.00</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="644" parent="375" name="Quantity">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <foreign-key id="645" parent="375" name="FKn7mqwuhn9copfd5ychsisjvqc">
+      <ColNames>MonsterID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>monsters</RefTableName>
+    </foreign-key>
+    <foreign-key id="646" parent="375" name="FK6gxmy23qojgc6th3dclji6onq">
+      <ColNames>ItemID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>items</RefTableName>
+    </foreign-key>
+    <index id="647" parent="375" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="648" parent="375" name="FK_monsters_drops_monsters">
+      <ColNames>MonsterID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="649" parent="375" name="FK_monsters_drops_items">
+      <ColNames>ItemID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="650" parent="375" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="651" parent="376" name="id">
+      <AutoIncrement>5</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="652" parent="376" name="MonsterID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="653" parent="376" name="SkillID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <foreign-key id="654" parent="376" name="FK8wpgjnoctef64danl01ia3swn">
+      <ColNames>MonsterID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>monsters</RefTableName>
+    </foreign-key>
+    <foreign-key id="655" parent="376" name="FKoe3xgdrji49tugb4307tsoa3h">
+      <ColNames>SkillID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>skills</RefTableName>
+    </foreign-key>
+    <index id="656" parent="376" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="657" parent="376" name="FK_monsters_skills_monsters">
+      <ColNames>MonsterID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="658" parent="376" name="FK_monsters_skills_skills">
+      <ColNames>SkillID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="659" parent="376" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="660" parent="377" name="id">
+      <AutoIncrement>174</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="661" parent="377" name="WarID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="662" parent="377" name="AchievementID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="663" parent="377" name="TitleID">
+      <DasType>int(11)|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="664" parent="377" name="FactionID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <Position>5</Position>
+    </column>
+    <column id="665" parent="377" name="WarMega">
+      <DasType>tinyint(1)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>6</Position>
+    </column>
+    <column id="666" parent="377" name="ReqReputation">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="667" parent="377" name="ReqClassID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="668" parent="377" name="ReqClassPoints">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+    </column>
+    <column id="669" parent="377" name="Name">
+      <DasType>varchar(64)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+    </column>
+    <column id="670" parent="377" name="Description">
+      <DasType>text|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+    </column>
+    <column id="671" parent="377" name="EndText">
+      <DasType>text|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>12</Position>
+    </column>
+    <column id="672" parent="377" name="Experience">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>13</Position>
+    </column>
+    <column id="673" parent="377" name="Gold">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>14</Position>
+    </column>
+    <column id="674" parent="377" name="Coins">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>15</Position>
+    </column>
+    <column id="675" parent="377" name="Reputation">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>16</Position>
+    </column>
+    <column id="676" parent="377" name="ClassPoints">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>17</Position>
+    </column>
+    <column id="677" parent="377" name="RewardType">
+      <DasType>char(1)|0s</DasType>
+      <DefaultExpression>&apos;S&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>18</Position>
+    </column>
+    <column id="678" parent="377" name="Level">
+      <DasType>tinyint(3)|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>19</Position>
+    </column>
+    <column id="679" parent="377" name="Upgrade">
+      <DasType>tinyint(1)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>20</Position>
+    </column>
+    <column id="680" parent="377" name="Once">
+      <DasType>tinyint(1)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>21</Position>
+    </column>
+    <column id="681" parent="377" name="Slot">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>-1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>22</Position>
+    </column>
+    <column id="682" parent="377" name="Value">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>23</Position>
+    </column>
+    <column id="683" parent="377" name="Field">
+      <DasType>char(3)|0s</DasType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>24</Position>
+    </column>
+    <column id="684" parent="377" name="Index">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>-1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>25</Position>
+    </column>
+    <foreign-key id="685" parent="377" name="FKnb8ktwlipo9t6el68robjv2p1">
+      <ColNames>WarID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>wars</RefTableName>
+    </foreign-key>
+    <foreign-key id="686" parent="377" name="FK1kaook9lujr6s2cwqr8rknegv">
+      <ColNames>AchievementID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>achievements</RefTableName>
+    </foreign-key>
+    <foreign-key id="687" parent="377" name="FK8nw5gp0m01yv7u00kmgpdam55">
+      <ColNames>FactionID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>factions</RefTableName>
+    </foreign-key>
+    <index id="688" parent="377" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="689" parent="377" name="FK_quests_wars">
+      <ColNames>WarID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="690" parent="377" name="FK_quests_achievements">
+      <ColNames>AchievementID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="691" parent="377" name="fk_quests_factionid">
+      <ColNames>FactionID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="692" parent="377" name="fk_quests_classid">
+      <ColNames>ReqClassID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="693" parent="377" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="694" parent="378" name="id">
+      <AutoIncrement>4</AutoIncrement>
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="695" parent="378" name="QuestID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="696" parent="378" name="ItemID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="697" parent="378" name="Quantity">
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <foreign-key id="698" parent="378" name="FKaenplea63pwgmx8cdq7a4smpc">
+      <ColNames>QuestID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>quests</RefTableName>
+    </foreign-key>
+    <foreign-key id="699" parent="378" name="FKmqhhvsl7v6n7dcqveyyib0j1d">
+      <ColNames>ItemID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>items</RefTableName>
+    </foreign-key>
+    <index id="700" parent="378" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="701" parent="378" name="FK_quests_reqditems_quests">
+      <ColNames>QuestID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="702" parent="378" name="FK_quests_reqditems_items">
+      <ColNames>ItemID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="703" parent="378" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="704" parent="379" name="id">
+      <AutoIncrement>4</AutoIncrement>
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="705" parent="379" name="QuestID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="706" parent="379" name="ItemID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="707" parent="379" name="Quantity">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <Position>4</Position>
+    </column>
+    <foreign-key id="708" parent="379" name="FK7ja2i1gayntqyx8acr1fh80tf">
+      <ColNames>QuestID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>quests</RefTableName>
+    </foreign-key>
+    <foreign-key id="709" parent="379" name="FKmuw6ian13i0bgbncnisalmofo">
+      <ColNames>ItemID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>items</RefTableName>
+    </foreign-key>
+    <index id="710" parent="379" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="711" parent="379" name="FK7ja2i1gayntqyx8acr1fh80tf">
+      <ColNames>QuestID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="712" parent="379" name="FKmuw6ian13i0bgbncnisalmofo">
+      <ColNames>ItemID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="713" parent="379" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="714" parent="380" name="id">
+      <AutoIncrement>4</AutoIncrement>
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="715" parent="380" name="QuestID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="716" parent="380" name="ItemID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="717" parent="380" name="Quantity">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="718" parent="380" name="Rate">
+      <DasType>decimal(7,2 digit) unsigned|0s</DasType>
+      <DefaultExpression>1.00</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="719" parent="380" name="RewardType">
+      <DasType>varchar(60)|0s</DasType>
+      <DefaultExpression>&apos;S&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <foreign-key id="720" parent="380" name="FKp12rmebsmpa9a5hx6qa2yfv04">
+      <ColNames>QuestID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>quests</RefTableName>
+    </foreign-key>
+    <foreign-key id="721" parent="380" name="FKkxgsbchs88dj96al5gg18roi6">
+      <ColNames>ItemID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>items</RefTableName>
+    </foreign-key>
+    <index id="722" parent="380" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="723" parent="380" name="FKp12rmebsmpa9a5hx6qa2yfv04">
+      <ColNames>QuestID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="724" parent="380" name="FKkxgsbchs88dj96al5gg18roi6">
+      <ColNames>ItemID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="725" parent="380" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="726" parent="381" name="id">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="727" parent="381" name="Code">
+      <DasType>varchar(60)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="728" parent="381" name="Coins">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="729" parent="381" name="Gold">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="730" parent="381" name="Exp">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="731" parent="381" name="ClassPoints">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="732" parent="381" name="ItemID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <column id="733" parent="381" name="Quantity">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="734" parent="381" name="QuantityLeft">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+    </column>
+    <column id="735" parent="381" name="Limited">
+      <DasType>tinyint(4)|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+    </column>
+    <column id="736" parent="381" name="Expires">
+      <DasType>tinyint(4)|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+    </column>
+    <column id="737" parent="381" name="DateExpiry">
+      <DasType>timestamp|0s</DasType>
+      <DefaultExpression>current_timestamp()</DefaultExpression>
+      <NotNull>1</NotNull>
+      <OnUpdate>current_timestamp()</OnUpdate>
+      <Position>12</Position>
+    </column>
+    <index id="738" parent="381" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="739" parent="381" name="FK_redeems_items">
+      <ColNames>ItemID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="740" parent="381" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="741" parent="382" name="id">
+      <AutoIncrement>4</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="742" parent="382" name="Name">
+      <DasType>varchar(64)|0s</DasType>
+      <DefaultExpression>&apos;Server&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="743" parent="382" name="IP">
+      <DasType>char(18)|0s</DasType>
+      <DefaultExpression>&apos;0.0.0.0&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="744" parent="382" name="Online">
+      <DasType>tinyint(1)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="745" parent="382" name="Status">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="746" parent="382" name="Upgrade">
+      <DasType>tinyint(1)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="747" parent="382" name="Chat">
+      <DasType>tinyint(1)|0s</DasType>
+      <DefaultExpression>2</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="748" parent="382" name="Count">
+      <DasType>mediumint(4)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="749" parent="382" name="Level">
+      <DasType>mediumint(4)|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+    </column>
+    <column id="750" parent="382" name="Max">
+      <DasType>mediumint(4)|0s</DasType>
+      <DefaultExpression>500</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+    </column>
+    <column id="751" parent="382" name="MOTD">
+      <DasType>text|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+    </column>
+    <column id="752" parent="382" name="Port">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>5588</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>12</Position>
+    </column>
+    <index id="753" parent="382" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="754" parent="382" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="755" parent="383" name="id">
+      <AutoIncrement>6</AutoIncrement>
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="756" parent="383" name="Word">
+      <DasType>varchar(60)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="757" parent="383" name="Mutetime">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <index id="758" parent="383" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="759" parent="383" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="760" parent="384" name="id">
+      <AutoIncrement>25</AutoIncrement>
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="761" parent="384" name="name">
+      <DasType>varchar(50)|0s</DasType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="762" parent="384" name="value">
+      <DasType>varchar(50)|0s</DasType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="763" parent="384" name="location">
+      <DasType>enum(&apos;loader&apos;, &apos;game&apos;, &apos;wiki&apos;)|0e</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <index id="764" parent="384" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="765" parent="384" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="766" parent="385" name="id">
+      <AutoIncrement>2</AutoIncrement>
+      <DasType>int(10) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="767" parent="385" name="message">
+      <DasType>varchar(255)|0s</DasType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="768" parent="385" name="Interval">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <index id="769" parent="385" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="770" parent="385" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="771" parent="386" name="id">
+      <AutoIncrement>51</AutoIncrement>
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="772" parent="386" name="name">
+      <DasType>varchar(50)|0s</DasType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="773" parent="386" name="value">
+      <DasType>varchar(50)|0s</DasType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <index id="774" parent="386" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="775" parent="386" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="776" parent="387" name="id">
+      <AutoIncrement>41</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="777" parent="387" name="Name">
+      <DasType>varchar(32)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="778" parent="387" name="House">
+      <DasType>tinyint(1)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="779" parent="387" name="Upgrade">
+      <DasType>tinyint(1)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="780" parent="387" name="Staff">
+      <DasType>tinyint(1)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="781" parent="387" name="Limited">
+      <DasType>tinyint(1)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="782" parent="387" name="Field">
+      <DasType>varchar(8)|0s</DasType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <index id="783" parent="387" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="784" parent="387" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="785" parent="388" name="id">
+      <AutoIncrement>6</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="786" parent="388" name="ShopID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="787" parent="388" name="ItemID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="788" parent="388" name="QuantityRemain">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <foreign-key id="789" parent="388" name="FKhy5g6k69qtdxbv0lpwl08jxc4">
+      <ColNames>ShopID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>shops</RefTableName>
+    </foreign-key>
+    <foreign-key id="790" parent="388" name="FKqikn091kioqm0dbkf1t0w0phm">
+      <ColNames>ItemID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>items</RefTableName>
+    </foreign-key>
+    <index id="791" parent="388" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="792" parent="388" name="fk_shopitems_shopid">
+      <ColNames>ShopID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="793" parent="388" name="fk_shopitems_itemid">
+      <ColNames>ItemID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="794" parent="388" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="795" parent="389" name="id">
+      <AutoIncrement>4</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="796" parent="389" name="ShopID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="797" parent="389" name="EndDate">
+      <DasType>datetime|0s</DasType>
+      <DefaultExpression>curdate()</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <foreign-key id="798" parent="389" name="FK_shops_seasonal_shops">
+      <ColNames>ShopID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>shops</RefTableName>
+    </foreign-key>
+    <index id="799" parent="389" name="PRIMARY">
+      <ColNames>id
+ShopID</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="800" parent="389" name="FK_shops_seasonal_shops">
+      <ColNames>ShopID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="801" parent="389" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="802" parent="390" name="id">
+      <AutoIncrement>10</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="803" parent="390" name="Name">
+      <DasType>varchar(32)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="804" parent="390" name="Animation">
+      <DasType>varchar(64)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="805" parent="390" name="Description">
+      <DasType>text|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="806" parent="390" name="Damage">
+      <DasType>decimal(7,2 digit)|0s</DasType>
+      <DefaultExpression>1.00</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="807" parent="390" name="Mana">
+      <DasType>smallint(3)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="808" parent="390" name="Icon">
+      <DasType>varchar(32)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="809" parent="390" name="Range">
+      <DasType>smallint(3) unsigned|0s</DasType>
+      <DefaultExpression>808</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="810" parent="390" name="Dsrc">
+      <DasType>varchar(70)|0s</DasType>
+      <Position>9</Position>
+    </column>
+    <column id="811" parent="390" name="Reference">
+      <DasType>tinytext|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+    </column>
+    <column id="812" parent="390" name="Target">
+      <DasType>tinytext|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+    </column>
+    <column id="813" parent="390" name="Effects">
+      <DasType>tinytext|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>12</Position>
+    </column>
+    <column id="814" parent="390" name="Type">
+      <DasType>varchar(7)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>13</Position>
+    </column>
+    <column id="815" parent="390" name="Strl">
+      <DasType>varchar(32)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>14</Position>
+    </column>
+    <column id="816" parent="390" name="Cooldown">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>15</Position>
+    </column>
+    <column id="817" parent="390" name="HitTargets">
+      <DasType>tinyint(2) unsigned|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>16</Position>
+    </column>
+    <index id="818" parent="390" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="819" parent="390" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="820" parent="391" name="id">
+      <AutoIncrement>9</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="821" parent="391" name="SkillID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="822" parent="391" name="ItemID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <foreign-key id="823" parent="391" name="FK__skills">
+      <ColNames>SkillID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>skills</RefTableName>
+    </foreign-key>
+    <foreign-key id="824" parent="391" name="FK__items">
+      <ColNames>ItemID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>items</RefTableName>
+    </foreign-key>
+    <index id="825" parent="391" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="826" parent="391" name="FK__skills">
+      <ColNames>SkillID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="827" parent="391" name="FK__items">
+      <ColNames>ItemID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="828" parent="391" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="829" parent="392" name="id">
+      <AutoIncrement>9</AutoIncrement>
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="830" parent="392" name="SkillID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="831" parent="392" name="AuraID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <foreign-key id="832" parent="392" name="FK_skills_auras_skills">
+      <ColNames>SkillID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>skills</RefTableName>
+    </foreign-key>
+    <foreign-key id="833" parent="392" name="FK_skills_auras_auras">
+      <ColNames>AuraID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>auras</RefTableName>
+    </foreign-key>
+    <index id="834" parent="392" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="835" parent="392" name="FK_skills_auras_skills">
+      <ColNames>SkillID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="836" parent="392" name="FK_skills_auras_auras">
+      <ColNames>AuraID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="837" parent="392" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="838" parent="393" name="id">
+      <AutoIncrement>4</AutoIncrement>
+      <DasType>int(10) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="839" parent="393" name="Name">
+      <DasType>varchar(50)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="840" parent="393" name="Category">
+      <DasType>varchar(50)|0s</DasType>
+      <DefaultExpression>&apos;None&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="841" parent="393" name="Description">
+      <DasType>text|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="842" parent="393" name="Images">
+      <DasType>text|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="843" parent="393" name="Price">
+      <DasType>decimal(7,2 digit) unsigned|0s</DasType>
+      <DefaultExpression>0.00</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="844" parent="393" name="Gold">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>7</Position>
+    </column>
+    <column id="845" parent="393" name="Coins">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>8</Position>
+    </column>
+    <column id="846" parent="393" name="Items">
+      <DasType>text|0s</DasType>
+      <Position>9</Position>
+    </column>
+    <column id="847" parent="393" name="QuantityRemain">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+    </column>
+    <index id="848" parent="393" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="849" parent="393" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="850" parent="394" name="id">
+      <AutoIncrement>18</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="851" parent="394" name="InvoiceID">
+      <DasType>varchar(16)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="852" parent="394" name="UserID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="853" parent="394" name="StoreID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="854" parent="394" name="Status">
+      <DasType>enum(&apos;Pending&apos;, &apos;Cancel&apos;, &apos;Paid&apos;)|0e</DasType>
+      <DefaultExpression>&apos;Pending&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="855" parent="394" name="Expired">
+      <DasType>datetime|0s</DasType>
+      <DefaultExpression>curdate()</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <index id="856" parent="394" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="857" parent="394" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="858" parent="395" name="id">
+      <AutoIncrement>12</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="859" parent="395" name="Name">
+      <DasType>varchar(55)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="860" parent="395" name="Description">
+      <DasType>text|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="861" parent="395" name="Strength">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="862" parent="395" name="Intellect">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="863" parent="395" name="Endurance">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="864" parent="395" name="Dexterity">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="865" parent="395" name="Wisdom">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="866" parent="395" name="Luck">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+    </column>
+    <column id="867" parent="395" name="Color">
+      <DasType>varchar(55)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+    </column>
+    <index id="868" parent="395" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="869" parent="395" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="870" parent="396" name="id">
+      <AutoIncrement>4</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="871" parent="396" name="Name">
+      <DasType>varchar(32)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="872" parent="396" name="Hash">
+      <DasType>char(70)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="873" parent="396" name="Rember_Token">
+      <DasType>varchar(100)|0s</DasType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <Position>4</Position>
+    </column>
+    <column id="874" parent="396" name="DiscordID">
+      <DasType>bigint(20) unsigned|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="875" parent="396" name="DiscordAvatar">
+      <DasType>longtext|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <column id="876" parent="396" name="HairID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="877" parent="396" name="TitleID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <Position>8</Position>
+    </column>
+    <column id="878" parent="396" name="Access">
+      <DasType>tinyint(2) unsigned|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+    </column>
+    <column id="879" parent="396" name="ActivationFlag">
+      <DasType>tinyint(1) unsigned|0s</DasType>
+      <DefaultExpression>5</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+    </column>
+    <column id="880" parent="396" name="PermamuteFlag">
+      <DasType>tinyint(1) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+    </column>
+    <column id="881" parent="396" name="Country">
+      <DasType>char(2)|0s</DasType>
+      <DefaultExpression>&apos;xx&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>12</Position>
+    </column>
+    <column id="882" parent="396" name="Age">
+      <DasType>tinyint(2) unsigned|0s</DasType>
+      <DefaultExpression>18</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>13</Position>
+    </column>
+    <column id="883" parent="396" name="Gender">
+      <DasType>char(1)|0s</DasType>
+      <DefaultExpression>&apos;M&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>14</Position>
+    </column>
+    <column id="884" parent="396" name="Email">
+      <DasType>varchar(64)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>15</Position>
+    </column>
+    <column id="885" parent="396" name="Level">
+      <DasType>tinyint(2) unsigned|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>16</Position>
+    </column>
+    <column id="886" parent="396" name="Gold">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>17</Position>
+    </column>
+    <column id="887" parent="396" name="Coins">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>18</Position>
+    </column>
+    <column id="888" parent="396" name="Exp">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>19</Position>
+    </column>
+    <column id="889" parent="396" name="ColorHair">
+      <DasType>char(6)|0s</DasType>
+      <DefaultExpression>&apos;000000&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>20</Position>
+    </column>
+    <column id="890" parent="396" name="ColorSkin">
+      <DasType>char(6)|0s</DasType>
+      <DefaultExpression>&apos;000000&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>21</Position>
+    </column>
+    <column id="891" parent="396" name="ColorEye">
+      <DasType>char(6)|0s</DasType>
+      <DefaultExpression>&apos;000000&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>22</Position>
+    </column>
+    <column id="892" parent="396" name="ColorBase">
+      <DasType>char(6)|0s</DasType>
+      <DefaultExpression>&apos;000000&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>23</Position>
+    </column>
+    <column id="893" parent="396" name="ColorTrim">
+      <DasType>char(6)|0s</DasType>
+      <DefaultExpression>&apos;000000&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>24</Position>
+    </column>
+    <column id="894" parent="396" name="ColorAccessory">
+      <DasType>char(6)|0s</DasType>
+      <DefaultExpression>&apos;000000&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>25</Position>
+    </column>
+    <column id="895" parent="396" name="SlotsAuction">
+      <DasType>smallint(5)|0s</DasType>
+      <DefaultExpression>10</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>26</Position>
+    </column>
+    <column id="896" parent="396" name="SlotsBag">
+      <DasType>smallint(5) unsigned|0s</DasType>
+      <DefaultExpression>40</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>27</Position>
+    </column>
+    <column id="897" parent="396" name="SlotsBank">
+      <DasType>smallint(5) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>28</Position>
+    </column>
+    <column id="898" parent="396" name="SlotsHouse">
+      <DasType>smallint(5) unsigned|0s</DasType>
+      <DefaultExpression>20</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>29</Position>
+    </column>
+    <column id="899" parent="396" name="SlotsLoadout">
+      <DasType>smallint(5) unsigned|0s</DasType>
+      <DefaultExpression>2</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>30</Position>
+    </column>
+    <column id="900" parent="396" name="DateCreated">
+      <DasType>datetime|0s</DasType>
+      <DefaultExpression>curdate()</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>31</Position>
+    </column>
+    <column id="901" parent="396" name="LastLogin">
+      <DasType>datetime|0s</DasType>
+      <DefaultExpression>curdate()</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>32</Position>
+    </column>
+    <column id="902" parent="396" name="CpBoostExpire">
+      <DasType>datetime|0s</DasType>
+      <DefaultExpression>&apos;2000-01-01 00:00:00&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>33</Position>
+    </column>
+    <column id="903" parent="396" name="RepBoostExpire">
+      <DasType>datetime|0s</DasType>
+      <DefaultExpression>&apos;2000-01-01 00:00:00&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>34</Position>
+    </column>
+    <column id="904" parent="396" name="GoldBoostExpire">
+      <DasType>datetime|0s</DasType>
+      <DefaultExpression>&apos;2000-01-01 00:00:00&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>35</Position>
+    </column>
+    <column id="905" parent="396" name="CoinsBoostExpire">
+      <DasType>datetime|0s</DasType>
+      <DefaultExpression>&apos;2000-01-01 00:00:00&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>36</Position>
+    </column>
+    <column id="906" parent="396" name="ExpBoostExpire">
+      <DasType>datetime|0s</DasType>
+      <DefaultExpression>&apos;2000-01-01 00:00:00&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>37</Position>
+    </column>
+    <column id="907" parent="396" name="UpgradeExpire">
+      <DasType>datetime|0s</DasType>
+      <DefaultExpression>curdate()</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>38</Position>
+    </column>
+    <column id="908" parent="396" name="UpgradeDays">
+      <DasType>smallint(3)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>39</Position>
+    </column>
+    <column id="909" parent="396" name="Upgraded">
+      <DasType>tinyint(1) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>40</Position>
+    </column>
+    <column id="910" parent="396" name="Achievement">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>41</Position>
+    </column>
+    <column id="911" parent="396" name="Settings">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>42</Position>
+    </column>
+    <column id="912" parent="396" name="Quests">
+      <DasType>char(100)|0s</DasType>
+      <DefaultExpression>&apos;0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>43</Position>
+    </column>
+    <column id="913" parent="396" name="Quests2">
+      <DasType>char(100)|0s</DasType>
+      <DefaultExpression>&apos;0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>44</Position>
+    </column>
+    <column id="914" parent="396" name="DailyQuests0">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>45</Position>
+    </column>
+    <column id="915" parent="396" name="DailyQuests1">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>46</Position>
+    </column>
+    <column id="916" parent="396" name="DailyQuests2">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>47</Position>
+    </column>
+    <column id="917" parent="396" name="MonthlyQuests0">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>48</Position>
+    </column>
+    <column id="918" parent="396" name="LastArea">
+      <DasType>varchar(64)|0s</DasType>
+      <DefaultExpression>&apos;faroff-1|Enter|Spawn&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>49</Position>
+    </column>
+    <column id="919" parent="396" name="CurrentServer">
+      <DasType>varchar(16)|0s</DasType>
+      <DefaultExpression>&apos;Offline&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>50</Position>
+    </column>
+    <column id="920" parent="396" name="HouseInfo">
+      <DasType>text|0s</DasType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>51</Position>
+    </column>
+    <column id="921" parent="396" name="KillCount">
+      <DasType>int(10) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>52</Position>
+    </column>
+    <column id="922" parent="396" name="DeathCount">
+      <DasType>int(10) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>53</Position>
+    </column>
+    <column id="923" parent="396" name="Address">
+      <DasType>varchar(255)|0s</DasType>
+      <DefaultExpression>&apos;0.0.0.0&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>54</Position>
+    </column>
+    <column id="924" parent="396" name="GameAddress">
+      <DasType>varchar(255)|0s</DasType>
+      <DefaultExpression>&apos;0.0.0.0&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>55</Position>
+    </column>
+    <foreign-key id="925" parent="396" name="FKk5xtmfxv33m8frrumlh13lje0">
+      <ColNames>HairID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>hairs</RefTableName>
+    </foreign-key>
+    <index id="926" parent="396" name="PRIMARY">
+      <ColNames>id
+Name
+Hash</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="927" parent="396" name="Username">
+      <ColNames>Name</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="928" parent="396" name="Hash">
+      <ColNames>Hash</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="929" parent="396" name="fk_users_hairid">
+      <ColNames>HairID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="930" parent="396" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="931" parent="396" name="Username">
+      <UnderlyingIndexName>Username</UnderlyingIndexName>
+    </key>
+    <column id="932" parent="397" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="933" parent="397" name="UserID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="934" parent="397" name="AchievementID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <index id="935" parent="397" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="936" parent="397" name="FK_users_achievements_users">
+      <ColNames>UserID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="937" parent="397" name="FK_users_achievements_achievements">
+      <ColNames>AchievementID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="938" parent="397" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="939" parent="398" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="940" parent="398" name="UserID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="941" parent="398" name="FactionID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="942" parent="398" name="Reputation">
+      <DasType>mediumint(6) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <foreign-key id="943" parent="398" name="FK_users_factions_users">
+      <ColNames>UserID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <foreign-key id="944" parent="398" name="FK_users_factions_factions">
+      <ColNames>FactionID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>factions</RefTableName>
+    </foreign-key>
+    <index id="945" parent="398" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="946" parent="398" name="UserID">
+      <ColNames>UserID
+FactionID</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="947" parent="398" name="fk_userfactions_factionid">
+      <ColNames>FactionID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="948" parent="398" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="949" parent="398" name="UserID">
+      <UnderlyingIndexName>UserID</UnderlyingIndexName>
+    </key>
+    <column id="950" parent="399" name="UserID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="951" parent="399" name="FriendID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <foreign-key id="952" parent="399" name="FK_users_friends_users">
+      <ColNames>UserID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <index id="953" parent="399" name="PRIMARY">
+      <ColNames>UserID
+FriendID</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="954" parent="399" name="fk_friends_friendid">
+      <ColNames>FriendID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="955" parent="399" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="956" parent="400" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="957" parent="400" name="GuildID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="958" parent="400" name="UserID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="959" parent="400" name="Rank">
+      <DasType>tinyint(1)|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <foreign-key id="960" parent="400" name="FK_users_guilds_guilds">
+      <ColNames>GuildID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>guilds</RefTableName>
+    </foreign-key>
+    <foreign-key id="961" parent="400" name="FK_users_guilds_users">
+      <ColNames>UserID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <index id="962" parent="400" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="963" parent="400" name="FK_users_guilds_guilds">
+      <ColNames>GuildID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="964" parent="400" name="FK_users_guilds_users">
+      <ColNames>UserID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="965" parent="400" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="966" parent="401" name="id">
+      <AutoIncrement>3</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="967" parent="401" name="UserID">
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="968" parent="401" name="Frame">
+      <DasType>varchar(50)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="969" parent="401" name="ItemID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="970" parent="401" name="X">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="971" parent="401" name="Y">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <index id="972" parent="401" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="973" parent="401" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="974" parent="402" name="id">
+      <AutoIncrement>30</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="975" parent="402" name="UserID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="976" parent="402" name="ItemID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="977" parent="402" name="EnhID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <Position>4</Position>
+    </column>
+    <column id="978" parent="402" name="Equipped">
+      <DasType>tinyint(1) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="979" parent="402" name="Quantity">
+      <DasType>mediumint(6) unsigned|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="980" parent="402" name="Bank">
+      <DasType>tinyint(1) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="981" parent="402" name="Wear">
+      <DasType>tinyint(1) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="982" parent="402" name="DatePurchased">
+      <DasType>datetime|0s</DasType>
+      <DefaultExpression>curdate()</DefaultExpression>
+      <Position>9</Position>
+    </column>
+    <foreign-key id="983" parent="402" name="FKskp2d25pul0ttf34s8qwg3hkl">
+      <ColNames>UserID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <foreign-key id="984" parent="402" name="FKss555n17dhk5gpfbbr5y67541">
+      <ColNames>ItemID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>items</RefTableName>
+    </foreign-key>
+    <foreign-key id="985" parent="402" name="FK74w0y27rldrrr5bxv7qilfjl4">
+      <ColNames>EnhID</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>enhancements</RefTableName>
+    </foreign-key>
+    <index id="986" parent="402" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="987" parent="402" name="fk_useritems_userid">
+      <ColNames>UserID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="988" parent="402" name="uid_itemid">
+      <ColNames>ItemID
+UserID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="989" parent="402" name="fk_useritems_enhid">
+      <ColNames>EnhID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="990" parent="402" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="991" parent="403" name="id">
+      <AutoIncrement>95</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="992" parent="403" name="UserID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="993" parent="403" name="Violation">
+      <DasType>varchar(64)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="994" parent="403" name="Details">
+      <DasType>text|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <index id="995" parent="403" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="996" parent="403" name="fk_userlogs_userid">
+      <ColNames>UserID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="997" parent="403" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="998" parent="404" name="id">
+      <AutoIncrement>2</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="999" parent="404" name="UserID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="1000" parent="404" name="ItemID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="1001" parent="404" name="EnhID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="1002" parent="404" name="Datetime">
+      <DasType>timestamp|0s</DasType>
+      <DefaultExpression>current_timestamp()</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="1003" parent="404" name="BuyerID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <column id="1004" parent="404" name="Gold">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="1005" parent="404" name="Coins">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="1006" parent="404" name="Quantity">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+    </column>
+    <column id="1007" parent="404" name="Type">
+      <DasType>enum(&apos;Auction&apos;)|0e</DasType>
+      <DefaultExpression>&apos;Auction&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+    </column>
+    <column id="1008" parent="404" name="Status">
+      <DasType>tinyint(1) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+    </column>
+    <index id="1009" parent="404" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="1010" parent="404" name="FK_users_markets_users">
+      <ColNames>UserID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="1011" parent="404" name="FK_users_markets_items">
+      <ColNames>ItemID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="1012" parent="404" name="FK_users_markets_enhancements">
+      <ColNames>EnhID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="1013" parent="404" name="FK_users_markets_users_2">
+      <ColNames>BuyerID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="1014" parent="404" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="1015" parent="405" name="OwnerID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="1016" parent="405" name="BuyerID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="1017" parent="405" name="Gold">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="1018" parent="405" name="Coins">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="1019" parent="405" name="ItemID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="1020" parent="405" name="EnhID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <column id="1021" parent="405" name="Quantity">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="1022" parent="405" name="Type">
+      <DasType>enum(&apos;Buy&apos;, &apos;Sell&apos;, &apos;Retrieve&apos;)|0e</DasType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="1023" parent="405" name="Market">
+      <DasType>enum(&apos;Auction&apos;)|0e</DasType>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+    </column>
+    <column id="1024" parent="405" name="Date">
+      <DasType>timestamp|0s</DasType>
+      <DefaultExpression>current_timestamp()</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+    </column>
+    <index id="1025" parent="405" name="FK_users_markets_logs_users">
+      <ColNames>OwnerID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="1026" parent="405" name="FK_users_markets_logs_users_2">
+      <ColNames>BuyerID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="1027" parent="405" name="FK_users_markets_logs_items">
+      <ColNames>ItemID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="1028" parent="405" name="FK_users_markets_logs_enhancements">
+      <ColNames>EnhID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <column id="1029" parent="406" name="id">
+      <AutoIncrement>5</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="1030" parent="406" name="UserID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="1031" parent="406" name="Name">
+      <DasType>varchar(50)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="1032" parent="406" name="Equipments">
+      <DasType>text|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <CollationName>utf8_general_ci</CollationName>
+    </column>
+    <column id="1033" parent="406" name="ColorAccessory">
+      <DasType>varchar(15)|0s</DasType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <CollationName>utf8_general_ci</CollationName>
+    </column>
+    <column id="1034" parent="406" name="ColorBase">
+      <DasType>varchar(15)|0s</DasType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <CollationName>utf8_general_ci</CollationName>
+    </column>
+    <column id="1035" parent="406" name="ColorTrim">
+      <DasType>varchar(15)|0s</DasType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <CollationName>utf8_general_ci</CollationName>
+    </column>
+    <column id="1036" parent="406" name="ColorHair">
+      <DasType>varchar(15)|0s</DasType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="1037" parent="406" name="ColorSkin">
+      <DasType>varchar(15)|0s</DasType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <CollationName>utf8_general_ci</CollationName>
+    </column>
+    <column id="1038" parent="406" name="ColorEye">
+      <DasType>varchar(15)|0s</DasType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+      <CollationName>utf8_general_ci</CollationName>
+    </column>
+    <foreign-key id="1039" parent="406" name="FK_users_loadouts_users">
+      <ColNames>UserID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <index id="1040" parent="406" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="1041" parent="406" name="FK_users_loadouts_users">
+      <ColNames>UserID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="1042" parent="406" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="1043" parent="407" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="1044" parent="407" name="RedeemID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="1045" parent="407" name="UserID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="1046" parent="407" name="Date">
+      <DasType>datetime|0s</DasType>
+      <DefaultExpression>curdate()</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <foreign-key id="1047" parent="407" name="FK_users_redeems_redeems">
+      <ColNames>RedeemID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>redeems</RefTableName>
+    </foreign-key>
+    <foreign-key id="1048" parent="407" name="FK_users_redeems_users">
+      <ColNames>UserID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <index id="1049" parent="407" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="1050" parent="407" name="FK_users_redeems_redeems">
+      <ColNames>RedeemID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="1051" parent="407" name="FK_users_redeems_users">
+      <ColNames>UserID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="1052" parent="407" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="1053" parent="408" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="1054" parent="408" name="UserID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="1055" parent="408" name="TargetName">
+      <DasType>varchar(60)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="1056" parent="408" name="Category">
+      <DasType>varchar(60)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="1057" parent="408" name="Description">
+      <DasType>text|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="1058" parent="408" name="DateSubmitted">
+      <DasType>datetime|0s</DasType>
+      <DefaultExpression>&apos;1974-01-01 00:00:00&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <index id="1059" parent="408" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="1060" parent="408" name="FK_users_reports_users">
+      <ColNames>UserID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="1061" parent="408" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="1062" parent="409" name="id">
+      <AutoIncrement>11</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="1063" parent="409" name="UserID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="1064" parent="409" name="TitleID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <index id="1065" parent="409" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="1066" parent="409" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="1067" parent="410" name="id">
+      <AutoIncrement>3</AutoIncrement>
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="1068" parent="410" name="FromUserID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="1069" parent="410" name="ToUserID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="1070" parent="410" name="Coins">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="1071" parent="410" name="Gold">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="1072" parent="410" name="Date">
+      <DasType>timestamp|0s</DasType>
+      <DefaultExpression>current_timestamp()</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <foreign-key id="1073" parent="410" name="FK_users_trades_users">
+      <ColNames>FromUserID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <foreign-key id="1074" parent="410" name="FK_users_trades_users_2">
+      <ColNames>ToUserID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <index id="1075" parent="410" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="1076" parent="410" name="FK_users_trades_users">
+      <ColNames>FromUserID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="1077" parent="410" name="FK_users_trades_users_2">
+      <ColNames>ToUserID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="1078" parent="410" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="1079" parent="411" name="FromUserID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="1080" parent="411" name="ToUserID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="1081" parent="411" name="ItemID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="1082" parent="411" name="EnhID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="1083" parent="411" name="Quantity">
+      <DasType>int(11)|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="1084" parent="411" name="Date">
+      <DasType>timestamp|0s</DasType>
+      <DefaultExpression>current_timestamp()</DefaultExpression>
+      <Position>6</Position>
+    </column>
+    <foreign-key id="1085" parent="411" name="FK_users_trades_items_users">
+      <ColNames>FromUserID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <foreign-key id="1086" parent="411" name="FK_users_trades_items_users_2">
+      <ColNames>ToUserID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <foreign-key id="1087" parent="411" name="FK_users_trades_items_items">
+      <ColNames>ItemID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>items</RefTableName>
+    </foreign-key>
+    <foreign-key id="1088" parent="411" name="FK_users_trades_items_enhancements">
+      <ColNames>EnhID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>enhancements</RefTableName>
+    </foreign-key>
+    <index id="1089" parent="411" name="FK__users">
+      <ColNames>FromUserID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="1090" parent="411" name="FK__users_2">
+      <ColNames>ToUserID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="1091" parent="411" name="FK__items">
+      <ColNames>ItemID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="1092" parent="411" name="FK__enhancements">
+      <ColNames>EnhID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <column id="1093" parent="412" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="1094" parent="412" name="Name">
+      <DasType>varchar(60)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="1095" parent="412" name="Points">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>3</Position>
+    </column>
+    <column id="1096" parent="412" name="MaxPoints">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>10000000</DefaultExpression>
+      <Position>4</Position>
+    </column>
+    <index id="1097" parent="412" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="1098" parent="412" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="1099" parent="413" name="id">
+      <AutoIncrement>2</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="1100" parent="413" name="UserID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="1101" parent="413" name="Title">
+      <DasType>varchar(50)|0s</DasType>
+      <DefaultExpression>&apos;No Title&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="1102" parent="413" name="Content">
+      <DasType>text|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="1103" parent="413" name="Image">
+      <DasType>varchar(50)|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="1104" parent="413" name="CreatedDate">
+      <DasType>datetime|0s</DasType>
+      <DefaultExpression>curdate()</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <index id="1105" parent="413" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="1106" parent="413" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="1107" parent="414" name="id">
+      <AutoIncrement>4</AutoIncrement>
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="1108" parent="414" name="ItemID">
+      <DasType>int(11) unsigned|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="1109" parent="414" name="Chance">
+      <DasType>decimal(7,2 digit)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="1110" parent="414" name="Quantity">
+      <DasType>int(11)|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <foreign-key id="1111" parent="414" name="FK_wheels_items">
+      <ColNames>ItemID</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>items</RefTableName>
+    </foreign-key>
+    <index id="1112" parent="414" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="1113" parent="414" name="Index 2">
+      <ColNames>ItemID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="1114" parent="414" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>

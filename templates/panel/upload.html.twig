@@ -1,0 +1,146 @@
+{% extends "layouts/panel.html.twig" %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block styles %}
+    {% include "/styles/datatables.html.twig" %}
+{% endblock %}
+
+{% block content %}
+
+
+    {% include "/components/panel.modal-delete.html.twig" %}
+
+    <section class="content">
+        <div class="container-fluid">
+
+            {% include "/components/panel.announcement.html.twig" %}
+
+            <div class="container">
+                <div class="card shadow">
+                    <div class="card-body">
+
+                        <div id="alertBox" class="alert alert-success alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            <span id="alertMsg"></span>
+                        </div>
+
+{#                        <div id="alertBox" style="display: none;"#}
+{#                             class="flex items-center p-4 mb-4 px-4 py-3 rounded relative border text-sm font-medium"#}
+{#                             role="alert">#}
+{#                            <svg id="alertIcon" class="shrink-0 w-4 h-4" aria-hidden="true"#}
+{#                                 xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">#}
+{#                                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>#}
+{#                            </svg>#}
+{#                            <div id="alertMsg" class="ms-3"></div>#}
+{#                        </div>#}
+
+                        <form id="uploadForm" method="post" enctype="multipart/form-data">
+
+                            <div id="subSelectWrapper" class="form-group">
+                                <label for="fileType">Select Type</label>
+                                <select class="form-control" id="fileType" name="type">
+                                    <option value="" selected disabled>--- CHOOSE ---</option>
+                                    <option value="" disabled>--- ARMORS ---</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="" disabled>--- AREAS ---</option>
+                                    <option value="maps">Maps</option>
+                                    <option value="monsters">Monsters</option>
+                                    <option value="" disabled>--- ITEMS ---</option>
+                                    <option value="axes">Axes</option>
+                                    <option value="bows">Bows</option>
+                                    <option value="capes">Capes</option>
+                                    <option value="daggers">Daggers</option>
+                                    <option value="gauntlet">Gauntlet</option>
+                                    <option value="grounds">Grounds</option>
+                                    <option value="guns">Guns</option>
+                                    <option value="helms">Helms</option>
+                                    <option value="houses">Houses</option>
+                                    <option value="maces">Maces</option>
+                                    <option value="pets">Pets</option>
+                                    <option value="polearms">Polearms</option>
+                                    <option value="staff">Staff</option>
+                                    <option value="staves">Staves</option>
+                                    <option value="swords">Swords</option>
+                                </select>
+                            </div>
+
+                            <div id="file" class="col-md-6">
+                                <div class="form-group">
+                                    <label id="label1" for="file">Item File</label>
+                                    <input type="file" class="form-control-file" name="file" required>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">Upload</button>
+                        </form>
+
+                        <div id="uploadStatus" class="mt-3"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+
+    <script type="module">
+        import { signal, effect } from "https://esm.sh/@preact/signals";
+
+        $(document).ready(() => {
+
+            const FORM = $('#uploadForm');
+
+            const alertBox = document.getElementById('alertBox');
+            const alertMsg = document.getElementById('alertMsg');
+
+            const alert = signal({ type: "", msg: "" });
+
+            effect(() => {
+                const { type, msg } = alert.value;
+
+                if (msg) {
+                    alertBox.style.display = 'flex';
+                    alertMsg.textContent = msg;
+
+                    if (type === "error") {
+                        if (alertBox.classList.contains("alert-success")) alertBox.classList.remove("alert-success");
+                        alertBox.classList.add("alert-danger");
+                    } else if (type === "success") {
+                        if (alertBox.classList.contains("alert-danger")) alertBox.classList.remove("alert-danger");
+                        alertBox.classList.add("alert-success");
+                    }
+
+                } else {
+                    alertBox.style.display = 'none';
+                }
+            });
+
+            FORM.on("submit", (e) => {
+                e.preventDefault();
+
+                $.ajax({
+                    url: `{{ route("panel.upload.test") }}`,
+                    type: "POST",
+                    data: new FormData(FORM[0]),
+                    dataType: "json",
+                    processData: false,
+                    contentType: false,
+                    error: (xhr) => {
+                        const msg = xhr.responseJSON?.msg || "Unknown error occurred.";
+                        alert.value = { type: "error", msg };
+                    },
+                    success: (data) => {
+                        const msg = data.msg || "Success.";
+                        alert.value = { type: "success", msg: msg };
+                    }
+                });
+            });
+
+        });
+    </script>
+
+{% endblock %}

@@ -1,0 +1,64 @@
+<div class="modal fade" id="{{ id }}">
+    <div class="modal-dialog {{ size }}">
+        <form id="form" enctype="multipart/form-data">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">{{ title }}</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="inputs" class="row">
+
+                        {% for key, value in forms %}
+                            {% if value.type == "text" or value.type == "number" or value.type == "checkbox" %}
+                                {% include "/components/panel.input.html.twig" with {
+                                    col: value.col,
+                                    name: key,
+                                    type: value.type,
+                                    placeHolder: value.placeHolder is defined ? value.placeHolder : "",
+                                    value: value.value is defined ? value.value : "",
+                                    isRequired: value.isRequired is defined ? value.isRequired : 0
+                                } %}
+                            {% elseif value.type == "textarea" %}
+                                {% include "/components/panel.textarea.html.twig" with {
+                                    col: value.col,
+                                    name: key,
+                                    value: value.value is defined ? value.value : "",
+                                    placeHolder: value.placeHolder is defined ? value.placeHolder : "",
+                                    isRequired: value.isRequired is defined ? value.isRequired : 0
+                                } %}
+                            {% elseif value.type == "select" %}
+                                {% include "/components/panel.select.html.twig" with {
+                                    col: value.col,
+                                    name: key,
+                                    options: value.options,
+                                    value: value.value is defined ? value.value : "",
+                                    isRequired: value.isRequired is defined ? value.isRequired : 0,
+                                    placeHolder: value.placeHolder is defined ? value.placeHolder : "",
+                                } %}
+                            {% elseif value.type == "select2" %}
+                                {% include "/components/panel.select2.html.twig" with {
+                                    col: value.col,
+                                    name: key,
+                                    options: value.options
+                                } %}
+                            {% elseif value.type == "upload" %}
+                                {% include "/components/panel.upload.html.twig" with {
+                                    col: value.col,
+                                    name: key
+                                } %}
+                            {% endif %}
+                        {% endfor %}
+
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" id="modal-btn" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

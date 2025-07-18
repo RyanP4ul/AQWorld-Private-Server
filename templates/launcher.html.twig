@@ -1,0 +1,95 @@
+{% extends 'layouts/web.layout.html.twig' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+    <div class="min-h-screen bg-gray-950 text-white flex flex-col">
+
+        {% include "/web/header.html.twig" %}
+
+        <section class="relative py-16 px-4 bg-gradient-to-r from-gray-700/50 to-gray-800/50 h-[350px]">
+            <div class="absolute inset-0 bg-[url('https://www.aq.com/img/bg/bg-md-mastheader.jpg')] bg-cover bg-center opacity-20"></div>
+
+            <div class="container mx-auto text-center mt-10">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                    Welcome to {{ config("APP_NAME") }}
+                </h1>
+                <p class="text-xl text-gray-300 mb-10">
+                    Embark on epic adventures, forge legendary alliances, and become the hero you were meant to be
+                </p>
+            </div>
+
+{#            <div class="container mx-auto text-center relative z-10">#}
+{#                <h1 class="text-5xl md:text-7xl font-bold mb-6 text-gray-200">#}
+{#                    Welcome to GameHub#}
+{#                </h1>#}
+{#                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">#}
+{#                    Embark on epic adventures, forge legendary alliances, and become the hero you were meant to be#}
+{#                </p>#}
+{#                <div class="flex flex-col sm:flex-row gap-4 justify-center">#}
+{#                    <button class="bg-gray-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-600 transition-all whitespace-nowrap">#}
+{#                        Start Playing#}
+{#                    </button>#}
+{#                    <button class="border-2 border-gray-600 text-gray-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-700 hover:text-white transition-all whitespace-nowrap">#}
+{#                        Watch Trailer#}
+{#                    </button>#}
+{#                </div>#}
+{#            </div>#}
+        </section>
+
+{#        <section class="py-16 px-4">#}
+{#            <div class="container mx-auto">#}
+{#                <h2 class="text-3xl font-bold text-center mb-12">Featured Games</h2>#}
+{#                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">#}
+{#                    <div class="bg-gray-800 rounded-lg overflow-hidden group hover:transform hover:scale-105 transition-all">#}
+{#                        <img#}
+{#                                src="https://readdy.ai/api/search-image?query=fantasy%20RPG%20game%20screenshot%20with%20magical%20characters%20fighting%20dragons%20in%20epic%20medieval%20setting%2C%20detailed%20game%20interface%2C%20dark%20fantasy%20atmosphere&width=400&height=250&seq=game1&orientation=landscape"#}
+{#                                alt="Epic Quest"#}
+{#                                class="w-full h-48 object-cover object-top"#}
+{#                        />#}
+{#                        <div class="p-6">#}
+{#                            <h3 class="text-xl font-bold mb-2">Epic Quest</h3>#}
+{#                            <p class="text-gray-400 mb-4">Embark on a legendary journey through mystical realms</p>#}
+{#                            <button class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors whitespace-nowrap">#}
+{#                                Play Now#}
+{#                            </button>#}
+{#                        </div>#}
+{#                    </div>#}
+
+{#                    <div class="bg-gray-800 rounded-lg overflow-hidden group hover:transform hover:scale-105 transition-all">#}
+{#                        <img#}
+{#                                src="https://readdy.ai/api/search-image?query=futuristic%20space%20shooter%20game%20with%20spaceships%20battling%20in%20cosmic%20environment%2C%20sci-fi%20gaming%20interface%2C%20neon%20blue%20and%20purple%20colors&width=400&height=250&seq=game2&orientation=landscape"#}
+{#                                alt="Cosmic Wars"#}
+{#                                class="w-full h-48 object-cover object-top"#}
+{#                        />#}
+{#                        <div class="p-6">#}
+{#                            <h3 class="text-xl font-bold mb-2">Cosmic Wars</h3>#}
+{#                            <p class="text-gray-400 mb-4">Command your fleet in intense space battles</p>#}
+{#                            <button class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors whitespace-nowrap">#}
+{#                                Play Now#}
+{#                            </button>#}
+{#                        </div>#}
+{#                    </div>#}
+
+{#                    <div class="bg-gray-800 rounded-lg overflow-hidden group hover:transform hover:scale-105 transition-all">#}
+{#                        <img#}
+{#                                src="https://readdy.ai/api/search-image?query=racing%20game%20with%20futuristic%20cars%20on%20neon-lit%20city%20streets%20at%20night%2C%20cyberpunk%20racing%20atmosphere%2C%20high-speed%20action%20scene&width=400&height=250&seq=game3&orientation=landscape"#}
+{#                                alt="Neon Racers"#}
+{#                                class="w-full h-48 object-cover object-top"#}
+{#                        />#}
+{#                        <div class="p-6">#}
+{#                            <h3 class="text-xl font-bold mb-2">Neon Racers</h3>#}
+{#                            <p class="text-gray-400 mb-4">Race through cyberpunk cities at lightning speed</p>#}
+{#                            <button class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors whitespace-nowrap">#}
+{#                                Play Now#}
+{#                            </button>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </section>#}
+
+        {% include "web/footer.html.twig" %}
+
+    </div>
+
+{% endblock %}

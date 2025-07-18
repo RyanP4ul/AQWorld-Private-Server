@@ -1,0 +1,283 @@
+{% extends 'layouts/web.layout.html.twig' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+    <div class="min-h-screen bg-gray-950 text-white flex flex-col">
+
+        {% include "/web/header.html.twig" %}
+
+        <section class="relative py-16 px-4 bg-gradient-to-r from-gray-700/50 to-gray-800/50 h-[350px]">
+            <div class="absolute inset-0 bg-[url('https://www.aq.com/img/bg/bg-md-mastheader.jpg')] bg-cover bg-center opacity-20"></div>
+
+            <div class="container mx-auto text-center mt-10">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                    Welcome to {{ config("APP_NAME") }}
+                </h1>
+                <p class="text-xl text-gray-300 mb-10">
+                    Embark on epic adventures, forge legendary alliances, and become the hero you were meant to be
+                </p>
+            </div>
+
+{#            <div class="container mx-auto text-center relative z-10">#}
+{#                <h1 class="text-5xl md:text-7xl font-bold mb-6 text-gray-200">#}
+{#                    Welcome to GameHub#}
+{#                </h1>#}
+{#                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">#}
+{#                    Embark on epic adventures, forge legendary alliances, and become the hero you were meant to be#}
+{#                </p>#}
+{#                <div class="flex flex-col sm:flex-row gap-4 justify-center">#}
+{#                    <button class="bg-gray-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-600 transition-all whitespace-nowrap">#}
+{#                        Start Playing#}
+{#                    </button>#}
+{#                    <button class="border-2 border-gray-600 text-gray-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-700 hover:text-white transition-all whitespace-nowrap">#}
+{#                        Watch Trailer#}
+{#                    </button>#}
+{#                </div>#}
+{#            </div>#}
+        </section>
+
+{#        <section class="py-16 px-4">#}
+{#            <div class="container mx-auto">#}
+{#                <h2 class="text-3xl font-bold text-center mb-12">Featured Games</h2>#}
+{#                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">#}
+{#                    <div class="bg-gray-800 rounded-lg overflow-hidden group hover:transform hover:scale-105 transition-all">#}
+{#                        <img#}
+{#                                src="https://readdy.ai/api/search-image?query=fantasy%20RPG%20game%20screenshot%20with%20magical%20characters%20fighting%20dragons%20in%20epic%20medieval%20setting%2C%20detailed%20game%20interface%2C%20dark%20fantasy%20atmosphere&width=400&height=250&seq=game1&orientation=landscape"#}
+{#                                alt="Epic Quest"#}
+{#                                class="w-full h-48 object-cover object-top"#}
+{#                        />#}
+{#                        <div class="p-6">#}
+{#                            <h3 class="text-xl font-bold mb-2">Epic Quest</h3>#}
+{#                            <p class="text-gray-400 mb-4">Embark on a legendary journey through mystical realms</p>#}
+{#                            <button class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors whitespace-nowrap">#}
+{#                                Play Now#}
+{#                            </button>#}
+{#                        </div>#}
+{#                    </div>#}
+
+{#                    <div class="bg-gray-800 rounded-lg overflow-hidden group hover:transform hover:scale-105 transition-all">#}
+{#                        <img#}
+{#                                src="https://readdy.ai/api/search-image?query=futuristic%20space%20shooter%20game%20with%20spaceships%20battling%20in%20cosmic%20environment%2C%20sci-fi%20gaming%20interface%2C%20neon%20blue%20and%20purple%20colors&width=400&height=250&seq=game2&orientation=landscape"#}
+{#                                alt="Cosmic Wars"#}
+{#                                class="w-full h-48 object-cover object-top"#}
+{#                        />#}
+{#                        <div class="p-6">#}
+{#                            <h3 class="text-xl font-bold mb-2">Cosmic Wars</h3>#}
+{#                            <p class="text-gray-400 mb-4">Command your fleet in intense space battles</p>#}
+{#                            <button class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors whitespace-nowrap">#}
+{#                                Play Now#}
+{#                            </button>#}
+{#                        </div>#}
+{#                    </div>#}
+
+{#                    <div class="bg-gray-800 rounded-lg overflow-hidden group hover:transform hover:scale-105 transition-all">#}
+{#                        <img#}
+{#                                src="https://readdy.ai/api/search-image?query=racing%20game%20with%20futuristic%20cars%20on%20neon-lit%20city%20streets%20at%20night%2C%20cyberpunk%20racing%20atmosphere%2C%20high-speed%20action%20scene&width=400&height=250&seq=game3&orientation=landscape"#}
+{#                                alt="Neon Racers"#}
+{#                                class="w-full h-48 object-cover object-top"#}
+{#                        />#}
+{#                        <div class="p-6">#}
+{#                            <h3 class="text-xl font-bold mb-2">Neon Racers</h3>#}
+{#                            <p class="text-gray-400 mb-4">Race through cyberpunk cities at lightning speed</p>#}
+{#                            <button class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors whitespace-nowrap">#}
+{#                                Play Now#}
+{#                            </button>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </section>#}
+
+        <section class="py-16 px-4 bg-gray-950">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">Latest Posts</h2>
+                <div id="posts" class="space-y-6"></div>
+                <div id="pagination" class="flex justify-center items-center space-x-4 mt-8"></div>
+            </div>
+        </section>
+
+        <div id="announcementModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+            <div class="bg-gray-900 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="relative">
+                    <img
+                            id="modalImage"
+                            src=""
+                            alt=""
+                            class="w-full h-64 object-cover object-top rounded-t-lg"
+                    />
+                    <button
+                            onclick="closeModal()"
+                            class="absolute top-4 right-4 w-10 h-10 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors"
+                    >
+                        <i class="ri-close-line text-xl"></i>
+                    </button>
+                </div>
+
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-4">
+                        <h1 id="modalTitle" class="text-3xl font-bold text-white"></h1>
+                        <span id="modalDate" class="text-sm text-gray-400"></span>
+                    </div>
+
+                    <div class="mb-6">
+                        <span id="modalAuthor" class="text-sm text-gray-400"></span>
+                    </div>
+
+                    <div class="prose prose-invert max-w-none">
+                        <p id="modalContent" class="text-gray-300 leading-relaxed whitespace-pre-line"></p>
+                    </div>
+
+                    <div class="mt-8 flex justify-end">
+                        <button
+                                onclick="closeModal()"
+                                class="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors whitespace-nowrap"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% include "web/footer.html.twig" %}
+
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+
+    <script>
+        const limit = 5;
+
+        function openModal(data) {
+            console.log("OPEN MODAL")
+
+            document.getElementById('announcementModal').classList.remove('hidden');
+
+            document.getElementById('modalImage').src = data.image;
+            document.getElementById('modalImage').alt = data.title;
+            document.getElementById('modalTitle').textContent = data.title;
+            document.getElementById('modalDate').textContent = data.date;
+            document.getElementById('modalAuthor').textContent = `By ${data.author}`;
+            document.getElementById('modalContent').textContent = data.fullContent;
+        }
+
+        function closeModal() {
+            document.getElementById('announcementModal').classList.add('hidden');
+        }
+
+        $(document).ready(() => {
+
+            function loadItems(page = 1) {
+                $.ajax({
+                    url: '{{ route("home") }}',
+                    method: 'GET',
+                    data: { page, limit },
+                    success: function (response) {
+                        const data = JSON.parse(response);
+                        renderItems(data.posts);
+                        renderPagination(parseInt(data.total), data.page);
+                    }
+                });
+            }
+
+            function renderItems(posts) {
+                $('#posts').empty();
+                posts.forEach(post => {
+                    $('#posts').append(`
+
+                    <div class="bg-gray-800 rounded-lg p-6 hover:bg-gray-750 transition-colors">
+                            <div class="flex flex-col md:flex-row gap-6">
+                                <img
+                                     src="${post.Image == null ? "https://placehold.co/100x100.png" : "/assets/images/posts/" + post.Image}"
+                                      alt="${post.Title}"
+                                      class="w-full md:w-48 h-32 object-cover object-top rounded-lg"
+                                />
+                                <div class="flex-1">
+                                    <div class="flex flex-wrap items-center gap-4 mb-2">
+                                        <h3 class="text-xl font-bold text-white">${post.Title}</h3>
+                                        <span class="text-sm text-gray-400">${post.CreatedDate}</span>
+                                    </div>
+                                    <p class="text-gray-300 mb-3">${post.Content}</p>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-sm text-gray-400">By <a href="#">${post.Name}</a></span>
+                                        <button
+                                        class="text-gray-400 hover:text-gray-300 transition-colors whitespace-nowrap"
+                                        onclick='openModal(${JSON.stringify({
+                                                            image: "/assets/images/posts/" + post.Image ?? "https://placehold.co/600x400.png",
+                                                            title: post.Title,
+                                                            date: post.CreatedDate,
+                                                            author: post.Name,
+                                                            fullContent: post.Content
+                                                        })})'>
+                                        Read More →
+                                    </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    `);
+                });
+            }
+
+            function renderPagination(totalItems, currentPage) {
+                const totalPages = Math.max(1, Math.ceil((totalItems || 0) / (limit || 1)));
+
+                let html = '';
+
+                if (currentPage > 1) {
+                    html += `<button class="page-btn px-4 py-2 rounded-lg bg-gray-800 text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-700 transition-colors whitespace-nowrap" data-page="${currentPage - 1}">Prev</button>`;
+                } else {
+                    html += `<button class="px-4 py-2 rounded-lg bg-gray-800 text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-900 transition-colors whitespace-nowrap" disabled>Prev</button>`;
+                }
+
+                if (totalPages <= 7) {
+                    for (let i = 1; i <= totalPages; i++) {
+                        html += createPageButton(i, currentPage);
+                    }
+                } else {
+                    html += createPageButton(1, currentPage);
+
+                    if (currentPage > 4) {
+                        html += `<span class="dots">...</span>`;
+                    }
+
+                    const start = Math.max(2, currentPage - 1);
+                    const end = Math.min(totalPages - 1, currentPage + 1);
+                    for (let i = start; i <= end; i++) {
+                        html += createPageButton(i, currentPage);
+                    }
+
+                    if (currentPage < totalPages - 3) {
+                        html += `<span class="dots">...</span>`;
+                    }
+
+                    html += createPageButton(totalPages, currentPage);
+                }
+
+                if (currentPage < totalPages) {
+                    html += `<button class="page-btn px-4 py-2 rounded-lg bg-gray-800 text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-700 transition-colors whitespace-nowrap" data-page="${currentPage + 1}">Next</button>`;
+                } else {
+                    html += `<button class="px-4 py-2 rounded-lg bg-gray-900 text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-700 transition-colors whitespace-nowrap" disabled>Next</button>`;
+                }
+
+                $('#pagination').html(html);
+            }
+
+            function createPageButton(page, currentPage) {
+                const isActive = parseInt(page) === parseInt(currentPage) ? 'bg-gray-700 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700';
+                return `<button class="page-btn w-10 h-10 rounded-lg transition-colors ${isActive}" data-page="${page}">${page}</button>`;
+            }
+
+            $(document).on('click', '.page-btn', function () {
+                const page = $(this).data('page');
+                loadItems(page);
+            });
+
+            loadItems();
+        });
+    </script>
+
+{% endblock %}

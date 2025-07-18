@@ -1,0 +1,9 @@
+<li class="nav-item">
+    <a href="{{ link }}" class="nav-link {% if route('current') == activeRoute %}active{% endif %}">
+        <i class="{{ iconClass }}"></i>
+        <p>{{ name }}</p>
+        {% if disabled %}
+            <span class="right badge badge-danger">Disable</span>
+        {% endif %}
+    </a>
+</li>

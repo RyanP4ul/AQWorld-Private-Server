@@ -1,0 +1,61 @@
+{% extends "layouts/panel.html.twig" %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block styles %}
+    {% include "/styles/datatables.html.twig" %}
+{% endblock %}
+
+{% block content %}
+
+    <section class="content">
+        <div class="container-fluid">
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title text-lg">Total Characters:</h3>
+                </div>
+                <div class="card-body p-0">
+                    <table id="datatable" class="table table-striped projects">
+                        <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Name</th>
+                            <th>Level</th>
+                            <th>Access</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+
+    <script src="/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="/plugins/toastr/toastr.min.js"></script>
+
+    <script>
+        $(document).ready(() => {
+            $('#datatable').DataTable({
+                processing: true,
+                autoWidth: false,
+                responsive: true,
+                lengthMenu: [ [20, 40, 80, 100, 150], [20, 40, 80, 100, 150] ],
+                ajax: "{{ route('panel.characters') }}",
+                columns: [
+                    { data: "id" },
+                    { data: "Name" },
+                    { data: "Level" },
+                    { data: "Access" },
+                    { data: "Action" }
+                ],
+            });
+        });
+    </script>
+{% endblock %}

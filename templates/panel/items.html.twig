@@ -1,0 +1,257 @@
+{% extends "layouts/panel.html.twig" %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block styles %}
+
+    {% include "/styles/datatables.html.twig" %}
+
+{% endblock %}
+
+{% block content %}
+
+    {% include "/components/panel.modal-form.html.twig" with {
+        id: "modal",
+        size: "modal-xl",
+        forms: {
+            id: { col: "3", type: "number", placeHolder: "Id", isRequired: 1 },
+            Name: { col: "3", type: "text", placeHolder: "Name", isRequired: 1 },
+            Type: {col: "2", type: "select", options: types, selected:"Item" },
+            Icon: {col: "2", type: "text", placeHolder: "Icon", value: "iibag", isRequired: 1},
+            Equipment: {col: "2", type: "select", options: equipments, value:"None" },
+
+            Description: {col: "12", type: "textarea", placeHolder: "e.i (HELLO BITCHES)", isRequired: 1},
+
+            File: {col: "4", type: "text", placeHolder: "e.i (Name.swf)"},
+            Link: {col: "4", type: "text", placeHolder: "Linkage"},
+            Level: {col: "2", type: "text", placeHolder: "Level", value:"1", isRequired: 1},
+            DPS: {col: "2", type: "text", placeHolder: "Dps", value:"10", isRequired: 1},
+
+            Range: {col: "4", type: "number", placeHolder: "Range", value:"50", isRequired: 1},
+            Rarity: {col: "4", type: "number", placeHolder: "Rarity", value:"1", isRequired: 1},
+            Quantity: {col: "4", type: "number", placeHolder: "Quantity", value:"1", isRequired: 1},
+            Stack: {col: "4", type: "number", placeHolder: "Stack", value:"1", isRequired: 1},
+            Cost: {col: "4", type: "number", placeHolder: "Cost", value:"0", isRequired: 1},
+
+            EnhID: {col: "4", type: "number", placeHolder: "Enhancement ID", value:"1"},
+            FactionID: {col: "4", type: "number", placeHolder: "Faction ID", value:"1" },
+            ReqReputation: {col: "4", type: "number", placeHolder: "Req Reputation", value:"0"},
+
+            ReqClassID: {col: "4", type: "number", placeHolder: "Req Class ID", value:"0"},
+            ReqClassPoints: {col: "6", type: "number", placeHolder: "Req CP", value:"0"},
+            ReqQuests: {col: "6", type: "number", placeHolder: "Req Quests", value:""},
+
+            Meta: {col: "6", type: "number", placeHolder: "Meta", value:""},
+
+            QuestStringIndex: {col: "3", type: "number", placeHolder: "Quest String Index", value:"-1"},
+            QuestStringValue: {col: "3", type: "number", placeHolder: "Meta", value:"0"},
+
+            Sell: { col: "3", type: "checkbox" },
+            Temporary: { col: "3", type: "checkbox" },
+            Upgrade: { col: "3", type: "checkbox" },
+            Staff: { col: "3", type: "checkbox" },
+        }
+    } %}
+
+    {% include "/components/panel.modal-delete.html.twig" %}
+
+    <section class="content">
+        <div class="container-fluid">
+
+            {% include "/components/panel.announcement.html.twig" %}
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title text-lg">Total {{ title }}: {{ total }}</h3>
+
+                    <div class="card-tools">
+                        <button type="button" id="btn-refresh" class="btn btn-round btn-primary waves-effect">
+                            <i class="fas fa-bolt pr-2"></i>
+                            Refresh
+                        </button>
+                        <button type="button" id="btn-insert" class="btn btn-round btn-success" data-toggle="modal" data-target="#modal">
+                            <i class="fa fa-plus pr-2"></i>
+                            Add new {{ title }}
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <table id="datatable" class="table table-striped projects">
+                        <thead>
+                        <tr>
+                            <th>id</th>
+{#                            <th>Image</th>#}
+                            <th>Name</th>
+                            <th>File</th>
+                            <th>Linkage</th>
+                            <th>Tags</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+
+    {% include "/scripts/datatables.html.twig" %}
+
+    <script>
+        $(document).ready(() => {
+            const MODAL_DIALOG = $("#modal");
+            const DELETE_MODAL = $("#deleteModal");
+            const MODAL_BTN = $("#modal-btn");
+            const INPUTS = $("#inputs input, #inputs select, #inputs textarea");
+            const FORM = $('#form');
+            const DATATABLE = $('#datatable').DataTable({
+                processing: true,
+                autoWidth: false,
+                responsive: true,
+                ajax: "{{ route('panel.items') }}",
+                lengthMenu: [ [20, 40, 80, 100, 150], [20, 40, 80, 100, 150] ],
+                columns: [
+                    {data: "id"},
+                    // {data: "Image"},
+                    {data: "Name"},
+                    {data: "File"},
+                    {data: "Link"},
+                    {data: "Tags"},
+                    {data: "Action"}
+                ],
+            });
+
+            let id = -1;
+            let type = "insert";
+
+            const resetDialog = () => {
+                INPUTS.each(function() {
+                    const name = $(this).attr("name");
+                    const child = $(`#_${name}`);
+
+                    if (!child.length) return;
+
+                    switch ($(this).attr("type")) {
+                        case "text":
+                        case "number":
+                            child.val($(this).attr("value") || "");
+                            break;
+                        case "checkbox":
+                            if (child.is(":checked")) child.click();
+                            break;
+                    }
+                });
+
+                $('.form-control').removeClass('is-invalid');
+                $('.text-sm').text("").removeClass('invalid-feedback');
+            };
+
+            const showModal = (btnText) => {
+                MODAL_BTN.text(btnText);
+                MODAL_DIALOG.modal("show");
+            };
+
+            $('body')
+                .on('click', '#btn-refresh', () => {
+                    DATATABLE.ajax.reload();
+                    toastr.success("Refreshing Datatables...");
+                })
+                .on('click', '#btn-insert', () => {
+                    id = -1;
+                    type = "insert";
+                    resetDialog();
+
+                    $.get(`/auto_increment?t=items`, (data) => {
+                        $('#_id').val(data);
+                    });
+
+                    showModal("Insert");
+                })
+                .on('click', '#btn-edit', function() {
+                    id = $(this).data('id');
+                    type = "update";
+                    resetDialog();
+
+                    $.get(`/panel/items/edit?id=${id}`, (data) => {
+                        INPUTS.each(function() {
+                            const name = $(this).attr("name");
+                            const child = $(`#_${name}`);
+
+                            console.log(`${name} > ${data[name]}`);
+
+                            if (["Sell", "Upgrade", "Temporary", "Staff"].includes(name)) {
+                                if ((data[name] === 1 && !child.is(":checked")) || (data[name] === 0 && child.is(":checked"))) {
+                                    child.click();
+                                }
+                            } else if (name === "Description") {
+                                child.val(data[name])
+                            } else {
+                                child.val(data[name]);
+                            }
+                        });
+
+                        showModal("Update");
+                    });
+                })
+                .on('click', '#btn-delete', function() {
+                    id = $(this).data('id');
+                    DELETE_MODAL.modal('show');
+                })
+                .on('click', '#confirmDelete', function() {
+                    $.ajax({
+                        url: `/panel/items/delete?id=${id}`,
+                        type: "GET",
+                        dataType: "json",
+                        success: (data) => {
+                            DATATABLE.ajax.reload();
+                            DELETE_MODAL.modal("hide");
+                            toastr.success(data.msg[0]);
+                        },
+                        error: () => toastr.error("An error occurred while deleting the record.")
+                    });
+                });
+
+            FORM.on("submit", (e) => {
+                e.preventDefault();
+
+                $.ajax({
+                    url: `/panel/items/save?type=${type}&oldId=${id}`,
+                    type: "POST",
+                    data: new FormData(FORM[0]),
+                    dataType: "json",
+                    processData: false,
+                    contentType: false,
+                    beforeSend: () => {
+                        $('.form-control').removeClass('is-invalid');
+                        $('.text-sm').removeClass('invalid-feedback').text("");
+                    },
+                    error: (data) => {
+                        if (typeof data.responseJSON.msg === 'object' && !Array.isArray(data.responseJSON.msg))
+                        {
+                            $.each(data.responseJSON.msg, (key, value) => {
+                                const INPUT = $(`#_${key}`);
+                                const ERR = $(`#${key}-error`);
+
+                                INPUT.addClass('is-invalid');
+                                ERR.text(value[0]).addClass('invalid-feedback');
+                            });
+                        }
+                        else
+                        {
+                            console.log(data.responseJSON.msg);
+                        }
+                    },
+                    success: (data) => {
+                        DATATABLE.ajax.reload();
+                        MODAL_DIALOG.modal("hide");
+                        toastr.success(data.msg[0]);
+                    }
+                });
+            });
+
+        });
+    </script>
+
+{% endblock %}
